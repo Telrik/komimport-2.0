@@ -74,9 +74,19 @@ class PartistConnector
 
     public static function getOffersSpecial()
     {
-        //$cacheKey = 'partist_komimport_getoffersequipment_special';
-        //$data = file_contents('http://partist.ru/connector.php?type=komimport&request=getoffersequipment&special_offer=1');
-        //$chunks = array_chunk($data['CONTENT'], 4, true);
+        $cacheKey = 'partist_komimport_getoffersequipment_special';
+        $cached = \Yii::app()->getCache()->get($cacheKey);
+        if (false === $cached) {
+            $data = \PartistConnector::file_contents('http://partist.ru/connector.php?type=komimport&request=getoffersequipment&special_offer=1');
+
+            foreach ($data['CONTENT'] as &$row) {
+
+                $row['_TE_name'] = \PartistConnector::makeSingle($row['TE_name']);
+            }
+            $cached = $data['CONTENT'];
+            Yii::app()->getCache()->set($cacheKey, $cached, 60 * 60 * 4); // 4 Hours
+        }
+        return $cached;
     }
 
 
