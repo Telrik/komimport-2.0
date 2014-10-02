@@ -62,12 +62,17 @@ class PartistConnector
                      }
                  }*/
 
-
                 //$row['_image'] = $image;
+
                 $row['_TE_name'] = \PartistConnector::makeSingle($row['TE_name']);
             }
             $cached = $data['CONTENT'];
+
             Yii::app()->getCache()->set($cacheKey, $cached, 60 * 60 * 4); // 4 Hours
+        }
+
+        foreach ($cached as &$row) {
+            //$row['OE_caption'] = substr($row['OE_caption'], 0, 230) . '<span class="rmore">' . substr($row['OE_caption'], 230) . '</span>';
         }
         return $cached;
     }
@@ -80,7 +85,6 @@ class PartistConnector
             $data = \PartistConnector::file_contents('http://partist.ru/connector.php?type=komimport&request=getoffersequipment&special_offer=1');
 
             foreach ($data['CONTENT'] as &$row) {
-
                 $row['_TE_name'] = \PartistConnector::makeSingle($row['TE_name']);
             }
             $cached = $data['CONTENT'];

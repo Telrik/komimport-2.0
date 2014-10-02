@@ -92,6 +92,10 @@
             max-height: 175px;
             margin: auto;
         }
+
+        .rmore {
+            display: none;
+        }
     </style>
 </head>
 <body>

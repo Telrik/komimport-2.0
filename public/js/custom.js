@@ -12,6 +12,7 @@ $(document).ready(function () {
 
     function setReadmore() {
         Shadowbox.setup('a[rel=shadowbox]');
+
         $('div.product-col div.description').readmore({
             speed: 75,
             maxHeight: 120,
@@ -22,10 +23,11 @@ $(document).ready(function () {
 
     $('#carousel-offers').on('slid.bs.carousel', function () {
         setReadmore();
-        //alert('');
     });
 
-    Shadowbox.init();
+    $('#carousel-offers-special').on('slid.bs.carousel', function () {
+        setReadmore();
+    });
 
     setReadmore();
 });
