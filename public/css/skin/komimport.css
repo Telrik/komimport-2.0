@@ -1,0 +1,76 @@
+
+/* news styles */
+.header-top {
+    background: none repeat scroll 0 0 #cbd2da;
+}
+
+nav.header-top .navbar-nav > li > a {
+    color: #000;
+}
+
+nav.header-top .navbar-nav > li > a:hover {
+    color: #2e70b1;
+}
+
+#header-area {
+    background: none repeat scroll 0 0 #eee;
+
+}
+
+.main-header p {
+    color: #000;
+}
+
+.main-header p a {
+    color: #2e70b1;
+}
+
+body {
+    background: none repeat scroll 0 0 #f4f5f5;
+}
+
+.main-header h4.lead {
+    color: #000;
+}
+
+#main-menu {
+    background: none repeat scroll 0 0 #000;
+}
+
+#main-menu .navbar-nav > li a {
+    color: #FFB400;
+}
+
+#main-menu .dropdown-menu {
+    background: none repeat scroll 0 0 #4d4d4f;
+}
+
+#main-menu .navbar-nav > li.open a {
+    background: none repeat scroll 0 0 #4d4d4f;
+    color: #fff;
+}
+
+#main-menu .dropdown-menu li a {
+    color: #fff;
+
+}
+
+#main-menu .dropdown-menu li:hover a {
+    background: #000;
+}
+
+#main-menu .navbar-nav > li > a:hover {
+    /*background: none repeat scroll 0 0 #000;*/
+}
+
+#main-menu .dropdown-inner .dropdown-header {
+    color: #FFB400;
+}
+
+#cart-new button {
+    height: 44px;
+}
+
+#cart-new {
+    margin: 0 1px;
+}

@@ -1,0 +1,181 @@
+nav.header-top {
+    border: none;
+    margin-bottom: 0px;
+}
+
+nav.header-top .navbar-nav > li > a {
+    color: #FFF;
+    padding: 12px 15px 12px 3px;
+}
+
+nav.header-top .navbar-collapse {
+    /*height: 44px !important;*/
+}
+
+.navbar, nav.header-top .navbar-nav {
+    min-height: 44px;
+    border-radius: 0px;
+}
+
+nav.header-top .navbar-nav > li > a:hover, .nav > li > a:focus {
+    background-color: transparent;
+
+}
+
+nav.header-top .navbar-nav > li .fa {
+    margin-right: 3px;
+}
+
+nav.header-top .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: transparent;
+    color: #FFB400;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: transparent;
+    color: #FFB400;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    color: #FFB400;
+}
+
+nav.header-top .collapse {
+    display: block !important;
+}
+
+#header-area {
+    /*background: none repeat scroll 0 0 #eee;*/
+}
+
+nav.header-top .navbar-nav > li:last-child > a {
+    /*padding: 12px 0px 12px 3px;*/
+}
+
+nav.header-top .navbar-nav > li {
+    display: inline-block;
+}
+
+#cart .btn {
+    /*width: 41px;
+    margin-right: 5px;*/
+
+}
+
+#cart .btn:hover {
+    color: #FFB400;
+}
+
+#cart {
+    /*margin-bottom: 10px;*/
+    margin: 0;
+}
+
+.main-header {
+    /* padding: 50px 0;*/
+}
+
+.arrow__corner-i {
+    border-color: rgba(255, 219, 76, 0) rgba(255, 219, 76, 0) rgba(255, 219, 76, 0) #ffdb4c;
+    border-style: solid;
+    border-width: 22px 0 22px 10px;
+    line-height: 0;
+    margin-right: 15px;
+    margin-top: -22px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.arrow__corner {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    left: 100%;
+    margin-left: -1px;
+    overflow: hidden;
+    right: auto;
+    width: 20px;
+}
+
+#search_ya {
+    margin-right: 10px;
+    background: linear-gradient(to left bottom, #ffdb4c 0px, #fc0 100%) repeat scroll 0 0 #fd0;
+    background-image: -webkit-linear-gradient(top right, #ffdb4c 0, #fc0 100%);
+    background: -moz-linear-gradient(right top, #ffdb4c 0px, #fc0 100%) repeat scroll 0 0 #ffdb4c;
+}
+
+#cart .btn {
+    margin-top: 0px;
+}
+
+. nav.header-top .navbar-nav > ul {
+    float: none !important;
+    text-align: center;
+}
+
+#search_ya div.input-group {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#search_ya input {
+    border-radius: 0px;
+    border: 1px solid #a9a9a9;
+
+}
+
+#search_ya button:before {
+    /*background: linear-gradient(to bottom, #fff 0px, #eee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0px, rgba(0, 0, 0, 0.4) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    bottom: 1px;
+
+    left: 1px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+}
+
+#search_ya button:hover {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+#search_ya button {
+    margin-left: 5px;
+    border-radius: 3px;
+    border: 1px solid #a9a9a9; /*rgba(0, 0, 0, 0.1);*/
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.w500 {
+    width: 500px;
+}
+
+.footer-links h5 {
+    margin-bottom: 8px;
+}
+
+.main-header h4.lead {
+    /*color: #ff9000;*/
+    color: #fcb500;
+    margin-bottom: 10px;
+    margin-top: 3px;
+}
+
+.main-header p {
+    color: #fcb500;
+}
+
+.main-header p a {
+    color: #fcb500;
+}
+
+.skype-contact i {
+    color: #7fba00;
+}
+
+.lead-test {
+    margin-top: 2px !important;
+    display: inline-table !important;
+}
