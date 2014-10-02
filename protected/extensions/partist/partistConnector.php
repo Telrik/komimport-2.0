@@ -64,7 +64,7 @@ class PartistConnector
 
                 //$row['_image'] = $image;
 
-                $row['_TE_name'] = \PartistConnector::makeSingle($row['TE_name']);
+                //$row['_TE_name'] = \PartistConnector::makeSingle($row['TE_name']);
             }
             $cached = $data['CONTENT'];
 
@@ -126,7 +126,7 @@ class PartistConnector
 
     public static function makeSingle($word)
     {
-        try {
+        /*try {
             Yii::import('ext.phpmorphy.common', true);
 
             $morphy = new phpMorphy(
@@ -141,6 +141,6 @@ class PartistConnector
 
         } catch (Exception $e) {
             return $word;
-        }
+        } */
     }
 }
