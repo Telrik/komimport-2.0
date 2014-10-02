@@ -96,6 +96,10 @@
         .rmore {
             display: none;
         }
+
+        .search-name {
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
