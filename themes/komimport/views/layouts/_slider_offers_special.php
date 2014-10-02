@@ -10,7 +10,7 @@ set_time_limit(60 * 15);
         <!-- Heading Starts -->
         <h2 style="margin-bottom: 30px" class="product-head">Хиты продаж</h2>
 
-        <div id="carousel-offers-special" class="carousel slide" data-interval="6000" data-ride="carousel">
+        <div id="carousel-offers-special" class="carousel slide" data-interval="15000" data-ride="carousel">
             <!-- Controls -->
             <a style="top:-30px;position:absolute;height:30px;" class="left carousel-control" href="#carousel-offers-special" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>

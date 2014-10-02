@@ -70,7 +70,7 @@
 
     <style>
         div.product-col div.description {
-            min-height: 65px;
+            /*min-height: 65px;*/
             /*max-height: 50px;*/
         }
 

@@ -15,7 +15,7 @@ $(document).ready(function () {
 
         $('div.product-col div.description').readmore({
             speed: 75,
-            maxHeight: 120,
+            maxHeight: 65,
             lessLink: '<a class="readmore" href="#"><i class="fa fa-chevron-up"></i> <i class="fa fa-chevron-up"></i></a>',
             moreLink: '<a class="readless" href="#"><i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-down"></i></a>'
         });
