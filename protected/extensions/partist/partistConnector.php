@@ -98,13 +98,13 @@ class PartistConnector
     {
         $country = 'RU';
         $parts = array();
-        $data = \PartistConnector::file_contents("http://partist.ru/connector.php?type=find_parts&catalogue_nums[]=$term&country=$country");
-        //print_r($data);
+
+        $data = \PartistConnector::file_contents("http://partist.ru/connector.php?type=client_offers&catalogue_nums[]=$term&country=$country");
+        //$data = \PartistConnector::file_contents("http://partist.ru/connector.php?type=find_parts&catalogue_nums[]=$term&country=$country");
+
         if ($data != false) {
             foreach ($data['data'] as $part) {
-                foreach ($part as $offer) {
-                    $parts[] = $offer;
-                }
+                $parts[] = $part;
             }
         }
         //print_r($parts);
