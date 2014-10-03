@@ -1,5 +1,8 @@
-<?php $this->pageTitle = Yii::app()->getModule('yupe')->siteName . ' - ' . 'Техника: ' . $row['M_name'];
+<?php
+$this->pageTitle = \Yii::app()->getModule('yupe')->siteName . ' - ' . 'Техника: ' . $row['M_name'];
 $this->breadcrumbs = array('Техника', $row['M_name']);
+$this->description = '';
+$this->keywords = '';
 ?>
 
 <!-- Product Info Starts -->
@@ -154,16 +157,17 @@ $this->breadcrumbs = array('Техника', $row['M_name']);
     <h4 class="heading">Похожие товары</h4>
     <!-- Products Row Starts -->
     <div class="row">
-        <?php
-        foreach ($related as $related_row) {
-            $this->renderPartial('_details',
-                array(
-                    'row' => $related_row,
-                )
-            );
-        }
-        //print_r($related);
-        ?>
+        <div class="col-md-3 col-sm-6">
+            <?php
+            foreach ($related as $related_row) {
+                $this->renderPartial('_details',
+                    array(
+                        'row' => $related_row,
+                    )
+                );
+            }
+            ?>
+        </div>
     </div>
     <!-- Products Row Ends -->
 </div>

@@ -14,6 +14,8 @@ namespace application\controllers;
 
 use application\components\Controller;
 
+\Yii::import('ext.partist.partistConnector', true);
+
 class SiteController extends Controller
 {
     const POST_PER_PAGE = 5;
@@ -35,11 +37,7 @@ class SiteController extends Controller
 
     public function actionSearch()
     {
-        \Yii::import('ext.partist.partistConnector', true);
-
-
         if (($term = \Yii::app()->getRequest()->getParam('q', null)) !== null) {
-
             $data = \PartistConnector::findParts($term);
             $this->render('search', array(
                 'data' => $data,

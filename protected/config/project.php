@@ -1,8 +1,7 @@
 <?php
 return array(
     'import' => array(
-        'ext.partist.*',
-        //'application.extensions.partist.*'
+        //'ext.partist.*',
     ),
     'rules' => array(
         '/equipment/' => 'equipment/index',

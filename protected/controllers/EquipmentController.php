@@ -3,18 +3,20 @@ namespace application\controllers;
 
 use application\components\Controller;
 
+\Yii::import('ext.partist.partistConnector', true);
+
 class EquipmentController extends Controller
 {
+
     public function actionIndex()
     {
+        $this->layout = 'equipment';
+
         $this->render('index');
     }
 
     public function actionView($id)
     {
-        \Yii::import('ext.partist.partistConnector', true);
-        
-        // echo $id;
         $data = \PartistConnector::getOfferEquipmentByID($id);
 
         $row = $data[$id];

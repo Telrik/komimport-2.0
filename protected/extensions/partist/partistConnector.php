@@ -10,16 +10,29 @@ class PartistConnector
     //$rez = custom_get_reguest('type=komimport&request=getoffersequipment'); //&mark[]=38 &mark[]=1
     //$data = \PartistConnector::file_contents("http://partist.ru/connector.php?type=find_parts&catalogue_nums[]=$term&country=$country");
 
+    public static function getBrands()
+    {
+        $cacheKey = 'partist_komimport_getbrands_equipment';
+        $cached = \Yii::app()->getCache()->get($cacheKey);
+        if (false === $cached) {
+            $data = PartistConnector::file_contents('http://partist.ru/connector.php?type=komimport&request=getbrands&sql_order_pole=B_id&&sql_order_direction=ASC');
+            $cached = $data;
+            Yii::app()->getCache()->set($cacheKey, $cached, 60 * 60 * 4); // 4 Hours
+        }
+        $cached = $cached['CONTENT'];
+        return $cached;
+    }
+
     public static function getGroups()
     {
-        $cacheKey = 'partist_komimport_getgroupequipment';
+        $cacheKey = 'partist_komimport_getgroups_equipment';
         $cached = \Yii::app()->getCache()->get($cacheKey);
         if (false === $cached) {
             $data = PartistConnector::file_contents('http://partist.ru/connector.php?type=komimport&request=getgroupequipment');
             $cached = $data;
             Yii::app()->getCache()->set($cacheKey, $cached, 60 * 60 * 4); // 4 Hours
         }
-
+        $cached = $cached['CONTENT'];
         return $cached;
     }
 

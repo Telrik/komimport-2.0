@@ -1,5 +1,4 @@
 <?php
-\Yii::import('ext.partist.partistConnector', true);
 $data = \PartistConnector::getOffersEquipmentSpecial();
 $chunks = array_chunk($data, 4, true);
 set_time_limit(60 * 15);
@@ -26,13 +25,15 @@ set_time_limit(60 * 15);
                     ?>
                     <div class="item <?php echo $chunk === reset($chunks) ? 'active' : ''; ?>">
                         <div class="row">
-                            <?php foreach ($chunk as $row) {
-                                $this->renderPartial('//equipment/_details',
-                                    array(
-                                        'row' => $row,
-                                    )
-                                );
-                            } ?>
+                            <div class="col-md-3 col-sm-6">
+                                <?php foreach ($chunk as $row) {
+                                    $this->renderPartial('//equipment/_details',
+                                        array(
+                                            'row' => $row,
+                                        )
+                                    );
+                                } ?>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>

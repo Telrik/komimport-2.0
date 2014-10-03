@@ -1,5 +1,6 @@
 <div class="collapse navbar-collapse navbar-cat-collapse">
     <ul class="nav navbar-nav">
+        <li><a href="/equipment/">Техника</a></li>
         <li class="dropdown">
             <a href="#0" class="dropdown-toggle" data-hover="dropdown" data-delay="10">
                 Запчасти
