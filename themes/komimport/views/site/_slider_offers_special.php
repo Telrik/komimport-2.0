@@ -22,22 +22,24 @@ set_time_limit(60 * 15);
             <div class="carousel-inner">
                 <?php
                 foreach ($chunks as $chunk) {
-                    ?>
-                    <div class="item <?php echo $chunk === reset($chunks) ? 'active' : ''; ?>">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <?php foreach ($chunk as $row) {
-                                    $this->renderPartial('//equipment/_details',
-                                        array(
-                                            'row' => $row,
-                                        )
-                                    );
-                                } ?>
-                            </div>
-                        </div>
+                ?>
+                <div class="item <?php echo $chunk === reset($chunks) ? 'active' : ''; ?>">
+                    <div class="row">
+
+                        <?php foreach ($chunk as $row) {
+                            echo '<div class="col-md-3 col-sm-6">';
+                            $this->renderPartial('//equipment/_details',
+                                array(
+                                    'row' => $row,
+                                )
+                            );
+                            echo '</div>';
+                        } ?>
                     </div>
-                <?php } ?>
+                </div>
             </div>
+            <?php } ?>
         </div>
+    </div>
     </div>
 </section>

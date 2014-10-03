@@ -157,19 +157,19 @@ $this->keywords = '';
     <h4 class="heading">Похожие товары</h4>
     <!-- Products Row Starts -->
     <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <?php
-            foreach ($related as $related_row) {
-                $this->renderPartial('_details',
-                    array(
-                        'row' => $related_row,
-                    )
-                );
-            }
-            ?>
-        </div>
+        <?php
+        foreach ($related as $related_row) {
+            echo '<div class="col-md-3 col-sm-6">';
+            $this->renderPartial('_details',
+                array(
+                    'row' => $related_row,
+                )
+            );
+            echo '</div>';
+        } ?>
     </div>
-    <!-- Products Row Ends -->
+</div>
+<!-- Products Row Ends -->
 </div>
 <!-- Related Products Ends -->
 
