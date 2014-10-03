@@ -29,14 +29,16 @@
     <!-- CSS Files -->
     <?php Yii::app()->clientScript->registerCssFile('/css/style.css'); ?>
     <?php Yii::app()->clientScript->registerCssFile('/css/responsive.css'); ?>
+    <?php //Yii::app()->clientScript->registerCssFile('/css/magnific-popup.css'); ?>
     <?php Yii::app()->clientScript->registerCssFile('/css/shadowbox/shadowbox.css'); ?>
-
-    <!-- Google Web Fonts -->
-    <?php Yii::app()->clientScript->registerCssFile('/css/google-fonts.css'); ?>
 
 
     <?php Yii::app()->clientScript->registerCssFile('/css/skin/default.css'); ?>
     <?php Yii::app()->clientScript->registerCssFile('/css/skin/komimport.css'); ?>
+
+
+    <!-- Google Web Fonts Local-->
+    <?php Yii::app()->clientScript->registerCssFile('/css/google-fonts.css'); ?>
 
     <!--
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -44,7 +46,7 @@
     -->
 
     <?php Yii::app()->clientScript->registerScriptFile('/js/bootstrap-hover-dropdown.min.js'); ?>
-    <?php Yii::app()->clientScript->registerScriptFile('/js/jquery.magnific-popup.min.js'); ?>
+    <?php //Yii::app()->clientScript->registerScriptFile('/js/jquery.magnific-popup.min.js'); ?>
     <?php Yii::app()->clientScript->registerScriptFile('/js/shadowbox.js'); ?>
     <?php Yii::app()->clientScript->registerScriptFile('/js/readmore.js'); ?>
     <?php Yii::app()->clientScript->registerScriptFile('/js/custom.js'); ?>
@@ -70,16 +72,39 @@
 
     <style>
         div.product-col div.description {
-            /*min-height: 65px;*/
+            min-height: 80px;
             /*max-height: 50px;*/
         }
 
+        .product-col > .image {
+            min-height: 135px;
+
+        }
+
+        .product-col > .image img {
+            max-height: 175px;
+            margin: auto;
+        }
+
+        .search-name {
+            text-transform: uppercase;
+        }
+
+        a.readmore {
+            color: #8b8b8b;
+        }
+        a.readmore:hover {
+            border-bottom: dashed 1px #7c7c7c;
+            text-decoration: none;
+        }
+
+        /*
         .readmore:hover, .readless:hover {
             text-decoration: none;
         }
 
         .readmore, .readless {
-            /*font-size: 12px;display: inline !important;*/
+            /*font-size: 12px;display: inline !important;
 
             text-align: right;
         }
@@ -88,18 +113,13 @@
             min-height: 20px !important;
         }
 
-        .product-col > .image img {
-            max-height: 175px;
-            margin: auto;
-        }
+
 
         .rmore {
             display: none;
         }
+*/
 
-        .search-name {
-            text-transform: uppercase;
-        }
     </style>
 </head>
 <body>

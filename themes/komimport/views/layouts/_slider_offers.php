@@ -1,6 +1,6 @@
 <?php
 \Yii::import('ext.partist.partistConnector', true);
-$data = \PartistConnector::getOffers();
+$data = \PartistConnector::getOffersEquipment();
 $chunks = array_chunk($data, 4, true);
 set_time_limit(60 * 15);
 ?>
@@ -60,6 +60,7 @@ set_time_limit(60 * 15);
                                                 <br/>
                                                 <span class="price-old"><?php echo $row['PRICE']['RUR'] * 1.3; ?>&nbsp;<i class="fa fa-rub"></i></span>
                                             </div>
+
                                             <div class="cart-button button-group">
                                                 <a rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=/pdf/29_wa420-3_713.pdf"> <i class="fa fa-file-pdf-o"></i></a>
 
