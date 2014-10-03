@@ -12,6 +12,8 @@ class EquipmentController extends Controller
 
     public function actionView($id)
     {
+        \Yii::import('ext.partist.partistConnector', true);
+        
         // echo $id;
         $data = \PartistConnector::getOfferEquipmentByID($id);
 
