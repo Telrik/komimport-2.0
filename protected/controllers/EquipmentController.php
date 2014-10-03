@@ -15,6 +15,21 @@ class EquipmentController extends Controller
         $this->render('index');
     }
 
+    public function actionType($id)
+    {
+        $this->layout = 'equipment';
+        $types = \PartistConnector::getTypesEquipment();
+        $data = \PartistConnector::getOfferEquipmentByParams(null, $id, 10);
+
+        //print_r($data);
+
+        $this->render('type', array(
+            'id' => $id,
+            'data' => $data,
+            'type' => $types[$id],
+        ));
+    }
+
     public function actionView($id)
     {
         $data = \PartistConnector::getOfferEquipmentByID($id);

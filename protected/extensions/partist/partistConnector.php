@@ -10,6 +10,20 @@ class PartistConnector
     //$rez = custom_get_reguest('type=komimport&request=getoffersequipment'); //&mark[]=38 &mark[]=1
     //$data = \PartistConnector::file_contents("http://partist.ru/connector.php?type=find_parts&catalogue_nums[]=$term&country=$country");
 
+
+    public static function getTypesEquipment()
+    {
+        $cacheKey = 'partist_komimport_gettypes_equipment';
+        $cached = \Yii::app()->getCache()->get($cacheKey);
+        if (false === $cached) {
+            $data = PartistConnector::file_contents('http://partist.ru/connector.php?type=komimport&request=gettypeequipment&sql_order_pole=TE_name&&sql_order_direction=ASC');
+            $cached = $data;
+            Yii::app()->getCache()->set($cacheKey, $cached, 60 * 60 * 4); // 4 Hours
+        }
+        $cached = $cached['CONTENT'];
+        return $cached;
+    }
+
     public static function getBrands()
     {
         $cacheKey = 'partist_komimport_getbrands_equipment';
@@ -38,7 +52,8 @@ class PartistConnector
 
     public static function getOfferEquipmentByParams($mark, $type, $num_on_page = 50, $page = 1)
     {
-        $params = '&type_e[]=' . $type . '&mark[]=' . $mark . '&num_on_page=' . $num_on_page . '&page=' . $page . '&sql_order_direction=DESC';
+        $params = '&type_e[]=' . $type . '&num_on_page=' . $num_on_page . '&page=' . $page . '&sql_order_direction=DESC';
+        if ($mark != null) $params .= '&mark[]=' . $mark;
 
         $cacheKey = 'partist_komimport_getoffersequipment_' . $params;
         $cached = \Yii::app()->getCache()->get($cacheKey);
@@ -52,9 +67,10 @@ class PartistConnector
         //print_r($cached);
         $cached = $cached['CONTENT'];
 
-        foreach ($cached as &$row) {
-            $row['OE_caption_CUT'] = \PartistConnector::cutDescription($row['OE_caption'], $row['M_name']);
-        }
+        if (count($cached) > 1)
+            foreach ($cached as &$row) {
+                $row['OE_caption_CUT'] = \PartistConnector::cutDescription($row['OE_caption'], $row['M_name']);
+            }
         return $cached;
     }
 
