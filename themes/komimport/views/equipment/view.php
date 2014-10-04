@@ -80,7 +80,7 @@ $this->keywords = '';
                 </li>
                 <li>
                     <span>Город:</span> <?php echo $row['CITY_name']; ?>
-                </li
+                </li>
             </ul>
             <!-- Manufacturer Ends -->
             <hr/>
