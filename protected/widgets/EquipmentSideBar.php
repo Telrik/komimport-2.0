@@ -27,9 +27,10 @@ class EquipmentSideBar extends CPortlet
         <div class="list-group">
             <?php foreach ($types as $type) {
                 ///equipment/type/' . $type['TE_id'] . '
+                //echo Yii::app()->createUrl('/equipment/list', array('mark' => $current_mark['B_id'], 'type' => $type['TE_id'])), false);
                 echo '<a href="/equipment/list?' . http_build_query(array_merge($_GET, array('type' => $type['TE_id']))) . '" class="list-group-item">';
                 echo '<i class="fa fa-chevron-right"></i>';
-                echo htmlspecialchars($type['TE_name']);
+                echo $type['TE_name'];
                 echo '</a>';
             }?>
         </div>
@@ -41,9 +42,9 @@ class EquipmentSideBar extends CPortlet
             <?php foreach ($brands as $brand) {
                 if ($brand['B_name'] == '') continue;
                 //echo '<a href="/equipment/brand/' . $brand['B_id'] . '" class="list-group-item">';
-                echo '<a href="/equipment/list?' . http_build_query(array_merge($_GET, array('mark' => $brand['B_id']))) . '" class="list-group-item">';
+                echo '<a href="/equipment/list?' . htmlspecialchars(http_build_query(array_merge($_GET, array('mark' => $brand['B_id'])))) . '" class="list-group-item">';
                 echo '<i class="fa fa-chevron-right"></i>';
-                echo htmlspecialchars($brand['B_name']);
+                echo $brand['B_name'];
                 echo '</a>';
             }?>
         </div>

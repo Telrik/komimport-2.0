@@ -67,13 +67,13 @@ $this->keywords = '';
                     <span>Раздел:</span> <?php echo $row['TE_name']; ?>
                 </li>
                 <li>
-                    <span>Наличие:</span> <strong class="label label-success">Да</strong>
+                    <span>Наличие:</span> <strong class="label label-info">Да</strong>
                 </li>
                 <li>
                     <span>Год:</span> <?php echo $row['OE_release_date']; ?>
                 </li>
                 <li>
-                    <span>Наработка:</span> <strong class="label label-info"><?php echo $row['OE_working_hours']; ?></strong> часов
+                    <span>Наработка:</span> <strong class="label label-info"><?php echo $row['OE_working_hours']; ?></strong> часов <?php if ($row['OE_working_hours'] == 0) echo '<strong class="label label-success">Новый</strong>'; ?>
                 </li>
                 <li>
                     <span>Страна:</span> <?php echo $row['CONT_name']; ?>
@@ -86,12 +86,12 @@ $this->keywords = '';
             <hr/>
             <!-- Price Starts -->
             <div class="price">
-                <span class="price-head">Цена:</span>
+                <span class="price-head">Цена: </span>
                 <?php if ($row['PRICE']['RUR'] == 0) { ?>
                     <span class="price-new"><strong class="label label-warning">По запросу</strong></span>
                 <?php } else { ?>
                     <span class="price-new"><?php echo round($row['PRICE']['RUR']); ?>&nbsp;<i class="fa fa-rub"></i></span>
-                    Старая цена: <span class="price-old"><?php srand($row['OE_id']);
+                    <span style="color:#808080">Старая цена: </span><span class="price-old"><?php srand($row['OE_id']);
                         $r = rand(105, 135);
                         echo round($row['PRICE']['RUR'] / 100 * $r); ?>&nbsp;<i class="fa fa-rub"></i></span>
                 <?php } ?>
