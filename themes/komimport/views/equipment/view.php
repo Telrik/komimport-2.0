@@ -86,12 +86,12 @@ $this->keywords = '';
             <hr/>
             <!-- Price Starts -->
             <div class="price">
-                <span class="price-head">Цена :</span>
+                <span class="price-head">Цена:</span>
                 <?php if ($row['PRICE']['RUR'] == 0) { ?>
                     <span class="price-new"><strong class="label label-warning">По запросу</strong></span>
                 <?php } else { ?>
                     <span class="price-new"><?php echo round($row['PRICE']['RUR']); ?>&nbsp;<i class="fa fa-rub"></i></span>
-                    <span class="price-old"><?php srand($row['OE_id']);
+                    Старая цена: <span class="price-old"><?php srand($row['OE_id']);
                         $r = rand(105, 135);
                         echo round($row['PRICE']['RUR'] / 100 * $r); ?>&nbsp;<i class="fa fa-rub"></i></span>
                 <?php } ?>
