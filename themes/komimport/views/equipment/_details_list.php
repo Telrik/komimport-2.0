@@ -32,7 +32,7 @@
                     <?php } else { ?>
                         <span class="price-new"><?php echo round($row['PRICE']['RUR']); ?>&nbsp;<i class="fa fa-rub"></i></span>
 
-                        <span class="price-old"><?php echo round($row['PRICE']['RUR'] * 1.3); ?>&nbsp;<i class="fa fa-rub"></i></span>
+                        <span class="price-old"><?php srand($row['OE_id']);$r = rand(105,135);echo round($row['PRICE']['RUR'] / 100 * $r); ?>&nbsp;<i class="fa fa-rub"></i></span>
                     <?php } ?>
                 </div>
                 <div class="cart-button button-group">

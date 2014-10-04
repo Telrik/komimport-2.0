@@ -26,7 +26,8 @@ class EquipmentSideBar extends CPortlet
         <h3 class="side-heading">Категории</h3>
         <div class="list-group">
             <?php foreach ($types as $type) {
-                echo '<a href="/equipment/type/' . $type['TE_id'] . '" class="list-group-item">';
+                ///equipment/type/' . $type['TE_id'] . '
+                echo '<a href="/equipment/list?' . http_build_query(array_merge($_GET, array('type' => $type['TE_id']))) . '" class="list-group-item">';
                 echo '<i class="fa fa-chevron-right"></i>';
                 echo $type['TE_name'];
                 echo '</a>';
@@ -39,7 +40,8 @@ class EquipmentSideBar extends CPortlet
         <div class="list-group">
             <?php foreach ($brands as $brand) {
                 if ($brand['B_name'] == '') continue;
-                echo '<a href="/equipment/brand/' . $brand['B_id'] . '" class="list-group-item">';
+                //echo '<a href="/equipment/brand/' . $brand['B_id'] . '" class="list-group-item">';
+                echo '<a href="/equipment/list?' . http_build_query(array_merge($_GET, array('mark' => $brand['B_id']))) . '" class="list-group-item">';
                 echo '<i class="fa fa-chevron-right"></i>';
                 echo $brand['B_name'];
                 echo '</a>';

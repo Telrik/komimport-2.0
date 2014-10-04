@@ -1,36 +1,36 @@
 <?php
-//print_r($type);
 ?>
 <!-- Main Heading Starts -->
 <h2 class="main-heading2">
-    <?php echo $type['TE_name'] ?>
+    Техника
 </h2>
 <!-- Main Heading Ends -->
+
 <!-- Category Intro Content Starts -->
 <div class="row cat-intro">
     <div class="col-sm-3">
-        <?php echo '<img src="http://partist.ru/' . $type['F_directory'] . '/' . $type['F_file'] . '" alt="' . $type['TE_name'] . '" class="img-responsive img-thumbnail"/>'; ?>
+
     </div>
     <div class="col-sm-9 cat-body">
-        <p>
-            <?php echo $type['GE_name'] ?>
-        </p>
-
-        <p>
-            <?php echo $type['TE_name'] ?>
-        </p>
+        <? if ($current_mark) {
+            echo '<h4>' . $current_mark['B_name'] . '</h4>';
+        }?>
+        <? if ($current_type) {
+            echo '<h4>' . $current_type['TE_name'] . '</h4>';
+        }?>
     </div>
 </div>
 <!-- Category Intro Content Ends -->
+
 <!-- Product Filter Starts -->
 <div class="product-filter">
     <div class="row">
         <div class="col-md-4">
             <div class="display">
-                <a href="/equipment/type/<?php echo $type['TE_id']; ?>/list" class="<?php echo $mode == 'list' ? 'active' : ''; ?>">
+                <a href="/equipment/list?<?php echo http_build_query(array_merge($_GET, array('mode' => 'list'))); ?>" class="<?php echo $mode == 'list' ? 'active' : ''; ?>">
                     <i class="fa fa-th-list" title="List View"></i>
                 </a>
-                <a href="/equipment/type/<?php echo $type['TE_id']; ?>/grid" class="<?php echo $mode == 'list' ? '' : 'active'; ?>">
+                <a href="/equipment/list?<?php echo http_build_query(array_merge($_GET, array('mode' => 'grid'))); ?>" class="<?php echo $mode == 'list' ? '' : 'active'; ?>">
                     <i class="fa fa-th" title="Grid View"></i>
                 </a>
             </div>
@@ -99,20 +99,21 @@
 <div class="row">
     <!-- Pagination Starts -->
     <div class="col-sm-6 pagination-block">
-        <ul class="pagination">
-            <li><a href="#">&laquo;</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">&raquo;</a></li>
-        </ul>
+        <?php
+        \Yii::import('ext.pagination.Pagination', true);
+        $pagination = (new Pagination());
+        $pagination->setCurrent($pager['page']);
+        $pagination->setTotal($pager['pages']);
+        $pagination->setCrumbs(10);
+        $pagination->setRPP($pager['num_on_page']);
+
+        echo $markup = $pagination->parse();
+        ?>
     </div>
     <!-- Pagination Ends -->
     <!-- Results Starts -->
     <div class="col-sm-6 results">
-        Showing 1 to 3 of 12 (4 Pages)
+        Всего предложений: <?php echo $pager['num_records']; ?>
     </div>
     <!-- Results Ends -->
 </div>

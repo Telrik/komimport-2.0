@@ -91,7 +91,9 @@ $this->keywords = '';
                     <span class="price-new"><strong class="label label-warning">По запросу</strong></span>
                 <?php } else { ?>
                     <span class="price-new"><?php echo round($row['PRICE']['RUR']); ?>&nbsp;<i class="fa fa-rub"></i></span>
-                    <span class="price-old"><?php echo round($row['PRICE']['RUR'] * 1.3); ?>&nbsp;<i class="fa fa-rub"></i></span>
+                    <span class="price-old"><?php srand($row['OE_id']);
+                        $r = rand(105, 135);
+                        echo round($row['PRICE']['RUR'] / 100 * $r); ?>&nbsp;<i class="fa fa-rub"></i></span>
                 <?php } ?>
 
                 <p class="price-tax"></p>
@@ -152,24 +154,25 @@ $this->keywords = '';
 </div>
 <!-- Tabs Ends -->
 
-<!-- Related Products Starts -->
-<div class="product-info-box">
-    <h4 class="heading">Похожие товары</h4>
-    <!-- Products Row Starts -->
-    <div class="row">
-        <?php
-        foreach ($related as $related_row) {
-            echo '<div class="col-md-3 col-sm-6">';
-            $this->renderPartial('_details',
-                array(
-                    'row' => $related_row,
-                )
-            );
-            echo '</div>';
-        } ?>
+<?php if (count($related) > 0) { ?>
+    <!-- Related Products Starts -->
+    <div class="product-info-box">
+        <h4 class="heading">Похожие товары</h4>
+        <!-- Products Row Starts -->
+        <div class="row">
+            <?php
+            foreach ($related as $related_row) {
+                echo '<div class="col-md-3 col-sm-6">';
+                $this->renderPartial('_details',
+                    array(
+                        'row' => $related_row,
+                    )
+                );
+                echo '</div>';
+            } ?>
+        </div>
     </div>
-</div>
-<!-- Products Row Ends -->
-</div>
+    <!-- Products Row Ends -->
+<?php } ?>
 <!-- Related Products Ends -->
 

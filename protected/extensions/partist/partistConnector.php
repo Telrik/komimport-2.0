@@ -26,10 +26,10 @@ class PartistConnector
 
     public static function getBrands()
     {
-        $cacheKey = 'partist_komimport_getbrands_equipment';
+        $cacheKey = 'partist_komimport_getbrands';
         $cached = \Yii::app()->getCache()->get($cacheKey);
         if (false === $cached) {
-            $data = PartistConnector::file_contents('http://partist.ru/connector.php?type=komimport&request=getbrands&sql_order_pole=B_id&&sql_order_direction=ASC');
+            $data = PartistConnector::file_contents('http://partist.ru/connector.php?type=komimport&request=getbrands&sql_order_pole=B_id&sql_order_direction=ASC');
             $cached = $data;
             Yii::app()->getCache()->set($cacheKey, $cached, 60 * 60 * 4); // 4 Hours
         }
@@ -39,7 +39,7 @@ class PartistConnector
 
     public static function getGroups()
     {
-        $cacheKey = 'partist_komimport_getgroups_equipment';
+        $cacheKey = 'partist_komimport_getgroups';
         $cached = \Yii::app()->getCache()->get($cacheKey);
         if (false === $cached) {
             $data = PartistConnector::file_contents('http://partist.ru/connector.php?type=komimport&request=getgroupequipment');
@@ -52,8 +52,9 @@ class PartistConnector
 
     public static function getOfferEquipmentByParams($mark, $type, $num_on_page = 50, $page = 1)
     {
-        $params = '&type_e[]=' . $type . '&num_on_page=' . $num_on_page . '&page=' . $page . '&sql_order_direction=DESC';
+        $params = '&num_on_page=' . $num_on_page . '&page=' . $page . '&sql_order_direction=DESC'; //&sql_order_pole=OE_id
         if ($mark != null) $params .= '&mark[]=' . $mark;
+        if ($type != null) $params .= '&type_e[]=' . $type;
 
         $cacheKey = 'partist_komimport_getoffersequipment_' . $params;
         $cached = \Yii::app()->getCache()->get($cacheKey);
@@ -65,10 +66,9 @@ class PartistConnector
         }
 
         //print_r($cached);
-        $cached = $cached['CONTENT'];
 
-        if (count($cached) > 1)
-            foreach ($cached as &$row) {
+        if (count($cached['CONTENT']) > 1)
+            foreach ($cached['CONTENT'] as &$row) {
                 $row['OE_caption_CUT'] = \PartistConnector::cutDescription($row['OE_caption'], $row['M_name']);
             }
         return $cached;
