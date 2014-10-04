@@ -13,7 +13,7 @@ $this->keywords = '';
         function imageLink($image, $id, $is_thumb = false)
         {
             $s = '';
-            $s .= '<a rel="shadowbox[gallery_' . $id . ']" href="http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'] . '">';
+            $s .= '<a data-rel="shadowbox[gallery_' . $id . ']" href="http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'] . '">';
             $s .= '<img ' . ($is_thumb ? 'width="65"' : '') . ' src="http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'] . '" alt="product" class="img-responsive thumbnail"/>';
             $s .= '</a>';
             return $s;
