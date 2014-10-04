@@ -20,7 +20,7 @@
         </div>
         <div class="col-xs-9">
             <div class="caption">
-                <h4><a href="/equipment/view/<?php echo $row['OE_id']; ?>"><b><?php echo $row['M_name'] ?></a></b></h4>
+                <h4><a href="/equipment/view/<?php echo $row['OE_id']; ?>"><b><?php echo $row['M_name'] ?></b></a></h4>
                 <h4 style="font-size: 14px"><?php echo $row['TE_name']; ?>, <?php echo $row['B_name']; ?></h4>
 
                 <div class="description">
