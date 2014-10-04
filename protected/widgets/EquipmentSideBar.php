@@ -29,7 +29,7 @@ class EquipmentSideBar extends CPortlet
                 ///equipment/type/' . $type['TE_id'] . '
                 echo '<a href="/equipment/list?' . http_build_query(array_merge($_GET, array('type' => $type['TE_id']))) . '" class="list-group-item">';
                 echo '<i class="fa fa-chevron-right"></i>';
-                echo $type['TE_name'];
+                echo htmlspecialchars($type['TE_name']);
                 echo '</a>';
             }?>
         </div>
@@ -43,7 +43,7 @@ class EquipmentSideBar extends CPortlet
                 //echo '<a href="/equipment/brand/' . $brand['B_id'] . '" class="list-group-item">';
                 echo '<a href="/equipment/list?' . http_build_query(array_merge($_GET, array('mark' => $brand['B_id']))) . '" class="list-group-item">';
                 echo '<i class="fa fa-chevron-right"></i>';
-                echo $brand['B_name'];
+                echo htmlspecialchars($brand['B_name']);
                 echo '</a>';
             }?>
         </div>
