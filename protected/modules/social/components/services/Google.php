@@ -10,6 +10,7 @@ class Google extends GoogleOAuthService //GoogleOpenIDService
     const AUTH_DATA_KEY = 'authData';
 
     public $requiredAttributes;
+    public $email;
 
     public function authenticate()
     {
