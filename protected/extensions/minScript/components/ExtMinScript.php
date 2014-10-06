@@ -84,7 +84,9 @@ class ExtMinScript extends CClientScript {
 	 * @throws CException if the minScript controller is not defined in CWebApplication::$controllerMap.
 	 */
 	public function init() {
+
 		parent::init();
+
 		// Initialize the cache application component instance for minScript
 		if (($minScriptCache = Yii::app() -> getComponent($this -> minScriptCacheId)) !== null) {
 			$this -> _minScriptCache = $minScriptCache;
@@ -92,9 +94,12 @@ class ExtMinScript extends CClientScript {
 			Yii::app() -> setComponents(array('minScriptCache' => array('class' => 'system.caching.CFileCache', 'cachePath' => Yii::app() -> runtimePath . '/minScript/cache/', 'cacheFileSuffix' => '')), false);
 			$this -> _minScriptCache = Yii::app() -> getComponent('minScriptCache');
 		}
+
+//print_r(Yii::app());
+
 		// Check for existence of the minScript controller inside CWebApplication::$controllerMap
 		if (!isset(Yii::app() -> controllerMap[$this -> minScriptControllerId])) {
-			throw new CException('The minScript controller with ID "' . $this -> minScriptControllerId . '" needs to be defined in CWebApplication::$controllerMap.');
+			//	throw new CException('The minScript controller with ID "' . $this -> minScriptControllerId . '" needs to be defined in CWebApplication::$controllerMap.');
 		}
 	}
 
@@ -224,6 +229,8 @@ class ExtMinScript extends CClientScript {
 		} elseif ($lm !== false) {
 			$params['lm'] = $lm;
 		}
+
+///echo Yii::app() -> createUrl($this -> minScriptControllerId . '/serve', $params);
 		return Yii::app() -> createUrl($this -> minScriptControllerId . '/serve', $params);
 	}
 

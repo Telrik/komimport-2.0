@@ -26,6 +26,7 @@ Yii::setPathOfAlias('vendor', dirname(__FILE__) . '/../../vendor/');
 Yii::setPathOfAlias('themes', '/../../themes/');
 
 return array(
+
     'basePath' => dirname(__FILE__) . '/..',
     // контроллер по умолчанию
     'defaultController' => 'site',
@@ -52,7 +53,11 @@ return array(
         'application.modules.yupe.widgets.*',
         'application.modules.yupe.controllers.*',
         'application.modules.yupe.extensions.tagcache.*',
+
+        'ext.easyimage.EasyImage',
     ),
+
+
     // подключение и конфигурирование модулей,
     // подробнее: http://www.yiiframework.ru/doc/guide/ru/basics.module
     'modules' => array(
@@ -76,8 +81,25 @@ return array(
         )
     ),
     'params' => require dirname(__FILE__) . '/params.php',
+
+    'controllerMap' => defined('YII_DEBUG') && YII_DEBUG
+        && is_writable(Yii::getPathOfAlias('application.runtime'))
+        && is_writable(Yii::getPathOfAlias('public.assets')) ? array() : array('min' => array('class' => 'ext.minScript.controllers.ExtMinScriptController',),),
+
     // конфигурирование основных компонентов (подробнее http://www.yiiframework.ru/doc/guide/ru/basics.component)
     'components' => array(
+        'easyImage' => array(
+            'class' => 'application.extensions.easyimage.EasyImage',
+            'driver' => 'GD',
+            'quality' => 100,
+            'cachePath' => '/assets/easyimage/',
+            'cacheTime' => 2592000,
+            'retinaSupport' => false,
+        ),
+        'clientScript' => defined('YII_DEBUG') && YII_DEBUG
+            && is_writable(Yii::getPathOfAlias('application.runtime'))
+            && is_writable(Yii::getPathOfAlias('public.assets')) ? array() : array('minScriptLmCache' => 3600, 'class' => 'ext.minScript.components.ExtMinScript',),
+
         'viewRenderer' => array(
             'class' => 'vendor.yiiext.twig-renderer.ETwigViewRenderer',
             'twigPathAlias' => 'vendor.twig.twig.lib.Twig',
@@ -176,5 +198,6 @@ return array(
         ),
     ),
     'rules' => array( //подробнее http://yupe.ru/docs/yupe/userspace.config.html
+        '/min/serve/g/<g:\w+>/lm/<lm:\d+>' => 'min/serve',
     )
 );

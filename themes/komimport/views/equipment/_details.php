@@ -5,15 +5,22 @@
             <?php
             if (count($row['OE_IMAGES']['IMAGES']) > 0) {
                 $image = array_shift($row['OE_IMAGES']['IMAGES']);
-                echo '<img src="http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'] . '" alt="product" class="img-responsive"/>';
+
+                // echo \Yii::app()->easyImage->thumbOf('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'], array('rotate' => 90));
+
+//echo $image['F_directory'];
+                echo '<img src="http://partist.ru/' . str_replace('user_files/', 'user_files/thumbs/', $image['F_directory']) . '/' . $image['F_file'] . '" alt="product" class="img-responsive"/>';
             } else
                 if (count($row['M_IMAGES']['IMAGES']) > 0) {
                     $image = array_shift($row['M_IMAGES']['IMAGES']);
-                    echo '<img src="http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'] . '" alt="product" class="img-responsive"/>';
+                    echo '<img src="http://partist.ru/' . str_replace('user_files/', 'user_files/thumbs/', $image['F_directory']) . '/' . $image['F_file'] . '" alt="product" class="img-responsive"/>';
                 } else {
-                    echo '<img src="http://partist.ru/' . $row['F_directory'] . '/' . $row['F_file'] . '" alt="product" class="img-responsive"/>';
+                    echo '<img src="http://partist.ru/' . str_replace('user_files/', 'user_files/thumbs/', $row['F_directory']) . '/' . $row['F_file'] . '" alt="product" class="img-responsive"/>';
                 }
+            //print_r($image);
+            //echo $image['F_directory'];
             ?>
+
         </a>
     </div>
     <div class="caption">

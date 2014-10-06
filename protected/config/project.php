@@ -1,9 +1,14 @@
 <?php
 return array(
-    'import' => array( //'ext.partist.*',
+
+    'import' => array(
+        'ext.minScript.controllers.*',
+
+        //'ext.partist.*',
     ),
+
     'rules' => array(
-	'/global/login' => 'global/login',
+        '/global/login' => 'global/login',
         '/equipment/' => 'equipment/list',
         //'/equipment/<action:\w+>' => 'equipment/<action>',
         '/equipment/view/<id:\d+>' => 'equipment/view',
