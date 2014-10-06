@@ -9,8 +9,8 @@ class Google extends GoogleOAuthService //GoogleOpenIDService
 {
     const AUTH_DATA_KEY = 'authData';
 
-    public $requiredAttributes;
-    public $email;
+    //public $requiredAttributes;
+    //public $email;
 
     public function authenticate()
     {
@@ -18,8 +18,8 @@ class Google extends GoogleOAuthService //GoogleOpenIDService
 
 
         if (parent::authenticate()) {
-            print_r($this);
-            
+            //print_r($this);
+
             $this->setState(
                 self::AUTH_DATA_KEY,
                 array(
