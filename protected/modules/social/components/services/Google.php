@@ -14,10 +14,12 @@ class Google extends GoogleOAuthService //GoogleOpenIDService
 
     public function authenticate()
     {
-        print_r($this);
+
 
 
         if (parent::authenticate()) {
+            print_r($this);
+            
             $this->setState(
                 self::AUTH_DATA_KEY,
                 array(
