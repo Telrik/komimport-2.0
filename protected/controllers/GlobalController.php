@@ -21,6 +21,62 @@ class GlobalController extends Controller
         );
     }
 
+    public function actionLogin1()
+    {
+        try {
+            $identity = new \UserIdentity($this->service);
+
+            if ($identity->authenticate() && Yii::app()->getUser()->login($identity)) {
+
+                Yii::app()->getUser()->setFlash(
+                    YFlashMessages::SUCCESS_MESSAGE,
+                    Yii::t('SocialModule.social', 'Вы успешно вошли!')
+                );
+
+                $module = Yii::app()->getModule('user');
+
+                $redirect = (Yii::app()->getUser()->isSuperUser() && $module->loginAdminSuccess)
+                    ? array($module->loginAdminSuccess)
+                    : array($module->loginSuccess);
+
+                Yii::app()->authenticationManager->setBadLoginCount(Yii::app()->getUser(), 0);
+
+                $this->redirect(Yii::app()->getUser()->getReturnUrl($redirect));
+            }
+
+            if ($this->service->hasAttribute('email') && Yii::app()->userManager->isUserExist(
+                    $this->service->email
+                )
+            ) {
+
+                Yii::app()->getUser()->setFlash(
+                    YFlashMessages::INFO_MESSAGE,
+                    Yii::t(
+                        'SocialModule.social',
+                        'Аккаунт с таким адресом уже существует! Войдите если хотите присоединить эту социальную сеть к своему аккаунту.'
+                    )
+                );
+
+                $this->redirect(array('/social/connect', 'service' => $this->service->getServiceName()));
+            }
+
+            Yii::app()->getUser()->setFlash(
+                YFlashMessages::SUCCESS_MESSAGE,
+                Yii::t(
+                    'SocialModule.social',
+                    'Вы успешно авторизовались, пожалуйста, завершите регистрацию!'
+                )
+            );
+
+            $this->redirect(array('/social/register', 'service' => $this->service->getServiceName()));
+
+            $this->redirect('/login');
+        } catch (EAuthException $e) {
+            Yii::app()->getUser()->setFlash('error', 'EAuthException: ' . $e->getMessage());
+            $this->redirect('/login');
+        }
+    }
+
     public function actionIndex()
     {
 
@@ -32,7 +88,7 @@ class GlobalController extends Controller
     {
 
         if (Yii::app()->user->isAuthenticated()) {
-            $this->controller->redirect(Yii::app()->getUser()->getReturnUrl());
+            //$this->redirect(Yii::app()->getUser()->getReturnUrl());
         }
 
         //@TODO 3 вынести в настройки модуля

@@ -1,22 +1,30 @@
 <?php
 namespace application\modules\social\components\services;
 
-use \GoogleOpenIDService;
+//require_once dirname(dirname(__FILE__)) . '/EOAuth2Service.php';
 
-class Google extends GoogleOpenIDService
+use GoogleOAuthService;
+
+class GoogleOAuth extends GoogleOAuthService //GoogleOpenIDService
 {
     const AUTH_DATA_KEY = 'authData';
 
+    public $requiredAttributes;
+
     public function authenticate()
     {
+       // print_r($this);
+       // die();
+        
         if (parent::authenticate()) {
             $this->setState(
                 self::AUTH_DATA_KEY,
                 array(
-                    'email'   => $this->email,
-                    'uid'     => $this->getId(),
+                    'requiredAttributes' => $this->requiredAttributes,
+                    'email' => $this->email,
+                    'uid' => $this->getId(),
                     'service' => $this->getServiceName(),
-                    'type'    => $this->getServiceType(),
+                    'type' => $this->getServiceType(),
                 )
             );
 
