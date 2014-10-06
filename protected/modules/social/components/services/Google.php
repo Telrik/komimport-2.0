@@ -3,9 +3,9 @@ namespace application\modules\social\components\services;
 
 //require_once dirname(dirname(__FILE__)) . '/EOAuth2Service.php';
 
-use GoogleOAuthService;
+use \GoogleOAuthService;
 
-class GoogleOAuth extends GoogleOAuthService //GoogleOpenIDService
+class Google extends GoogleOAuthService //GoogleOpenIDService
 {
     const AUTH_DATA_KEY = 'authData';
 
@@ -15,7 +15,7 @@ class GoogleOAuth extends GoogleOAuthService //GoogleOpenIDService
     {
        // print_r($this);
        // die();
-        
+
         if (parent::authenticate()) {
             $this->setState(
                 self::AUTH_DATA_KEY,
