@@ -2,6 +2,7 @@
 namespace application\controllers;
 
 use application\components\Controller;
+use Yii;
 
 \Yii::import('ext.partist.partistConnector', true);
 
@@ -29,6 +30,18 @@ class GlobalController extends Controller
 
     public function actionLogin($login = null, $password = null)
     {
-        $this->render('login');
+
+        if (Yii::app()->user->isAuthenticated()) {
+            $this->controller->redirect(Yii::app()->getUser()->getReturnUrl());
+        }
+
+        //@TODO 3 вынести в настройки модуля
+        $scenario = Yii::app()->authenticationManager->getBadLoginCount(Yii::app()->getUser()) > 3 ? 'loginLimit' : '';
+        $module = Yii::app()->getModule('user');
+
+        $model = new \LoginForm($scenario);
+        $this->render('login', array('model' => $model, 'module' => $module));
+
+
     }
 }
