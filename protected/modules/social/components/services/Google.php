@@ -14,7 +14,7 @@ class Google extends GoogleOAuthService //GoogleOpenIDService
 
     public function authenticate()
     {
-       // print_r($this);
+        print_r($this);
 
 
         if (parent::authenticate()) {
