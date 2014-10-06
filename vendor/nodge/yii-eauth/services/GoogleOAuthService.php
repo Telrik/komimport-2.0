@@ -18,6 +18,8 @@ require_once dirname(dirname(__FILE__)) . '/EOAuth2Service.php';
  */
 class   GoogleOAuthService extends EOAuth2Service {
 
+    protected $requiredAttributes;
+    
 	protected $name = 'google';
 	protected $title = 'Google';
 	protected $type = 'OAuth';
