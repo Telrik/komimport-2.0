@@ -103,7 +103,9 @@ class UserController extends FrontController
     {
         $authData = $this->service->getAuthData();
 
-print_r($authData);die();
+        //print_r($authData);die();
+
+
         if (null === $authData || Yii::app()->getUser()->isAuthenticated()) {
             $this->redirect(Yii::app()->getUser()->returnUrl);
         }

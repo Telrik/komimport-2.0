@@ -16,7 +16,7 @@ require_once dirname(dirname(__FILE__)) . '/EOAuth2Service.php';
  *
  * @package application.extensions.eauth.services
  */
-class GoogleOAuthService extends EOAuth2Service {
+class   GoogleOAuthService extends EOAuth2Service {
 
 	protected $name = 'google';
 	protected $title = 'Google';
