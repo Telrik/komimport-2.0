@@ -1,6 +1,9 @@
 <?php
 $this->pageTitle = Yii::t('UserModule.user', 'Sign up');
 $this->breadcrumbs = array(Yii::t('UserModule.user', 'Sign up'));
+
+print_r($form);
+
 ?>
 
 <?php $this->widget('yupe\widgets\YFlashMessages'); ?>
