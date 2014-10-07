@@ -1,4 +1,6 @@
 <?php
+$this->layout = '//layouts/default';
+
 /* @var $model ProfileForm */
 
 $this->pageTitle = Yii::t('UserModule.user', 'Change password');

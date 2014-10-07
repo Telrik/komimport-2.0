@@ -1,6 +1,7 @@
 <?php
 $this->pageTitle = Yii::t('UserModule.user', 'Password recovery');
 $this->breadcrumbs = array(Yii::t('UserModule.user', 'Password recovery'));
+$this->layout = '//layouts/default';
 ?>
 <?php $this->widget('yupe\widgets\YFlashMessages'); ?>
 

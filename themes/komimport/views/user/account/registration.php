@@ -1,6 +1,7 @@
 <?php
 $this->pageTitle = Yii::t('UserModule.user', 'Sign up');
 $this->breadcrumbs = array(Yii::t('UserModule.user', 'Sign up'));
+$this->layout = '//layouts/default';
 ?>
 
 <?php $this->widget('yupe\widgets\YFlashMessages'); ?>
@@ -8,8 +9,8 @@ $this->breadcrumbs = array(Yii::t('UserModule.user', 'Sign up'));
 <?php $form = $this->beginWidget(
     'bootstrap.widgets.TbActiveForm',
     array(
-        'id'          => 'registration-form',
-        'type'        => 'vertical',
+        'id' => 'registration-form',
+        'type' => 'vertical',
         'htmlOptions' => array(
             'class' => 'well',
         )
@@ -56,13 +57,13 @@ $this->breadcrumbs = array(Yii::t('UserModule.user', 'Sign up'));
                 'CCaptcha',
                 array(
                     'showRefreshButton' => true,
-                    'imageOptions'      => array(
+                    'imageOptions' => array(
                         'width' => '150',
                     ),
-                    'buttonOptions'     => array(
+                    'buttonOptions' => array(
                         'class' => 'btn btn-default',
                     ),
-                    'buttonLabel'       => '<i class="glyphicon glyphicon-repeat"></i>',
+                    'buttonLabel' => '<i class="glyphicon glyphicon-repeat"></i>',
                 )
             ); ?>
         </div>
@@ -76,8 +77,8 @@ $this->breadcrumbs = array(Yii::t('UserModule.user', 'Sign up'));
             'bootstrap.widgets.TbButton',
             array(
                 'buttonType' => 'submit',
-                'context'    => 'primary',
-                'label'      => Yii::t('UserModule.user', 'Sign up'),
+                'context' => 'primary',
+                'label' => Yii::t('UserModule.user', 'Sign up'),
             )
         ); ?>
     </div>
@@ -92,7 +93,7 @@ $this->breadcrumbs = array(Yii::t('UserModule.user', 'Sign up'));
             $this->widget(
                 'vendor.nodge.yii-eauth.EAuthWidget',
                 array(
-                    'action'             => '/social/login',
+                    'action' => '/social/login',
                     'predefinedServices' => array('google', 'facebook', 'vkontakte', 'twitter', 'github'),
                 )
             );

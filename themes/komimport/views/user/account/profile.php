@@ -1,7 +1,7 @@
 <?php
 $this->pageTitle = Yii::t('UserModule.user', 'User profile');
 $this->breadcrumbs = array(Yii::t('UserModule.user', 'User profile'));
-
+$this->layout = '//layouts/default';
 $form = $this->beginWidget(
     'bootstrap.widgets.TbActiveForm',
     array(
