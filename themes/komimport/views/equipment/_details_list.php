@@ -38,7 +38,20 @@
                     <?php } ?>
                 </div>
                 <div class="cart-button button-group">
-                    <a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=/pdf/29_wa420-3_713.pdf"> <i class="fa fa-file-pdf-o"></i></a>
+                    <?php
+                    if (count($row['OE_IMAGES']['OTHERS']) > 0) {
+                        foreach ($row['OE_IMAGES']['OTHERS'] as $image) {
+                            echo '<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=' . ('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file']) . '"> <i class="fa fa-file-pdf-o"></i></a>';
+                            break;
+                        }
+                    } else
+                        if (count($row['M_IMAGES']['OTHERS']) > 0) {
+                            foreach ($row['M_IMAGES']['OTHERS'] as $image) {
+                                echo '<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=' . ('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file']) . '"> <i class="fa fa-file-pdf-o"></i></a>';
+                                break;
+                            }
+                        }
+                    ?>
                     <button type="button" class="btn btn-cart">
                         В корзину
                         <i class="fa fa-shopping-cart"></i>
