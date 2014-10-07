@@ -11,10 +11,10 @@ print_r($form);
 <?php $form = $this->beginWidget(
     'bootstrap.widgets.TbActiveForm',
     array(
-        'id'           => 'social-registration-form',
-        'type'         => 'vertical',
+        'id' => 'social-registration-form',
+        'type' => 'vertical',
         //'inlineErrors' => true,
-        'htmlOptions'  => array(
+        'htmlOptions' => array(
             'class' => 'well',
         )
     )
@@ -22,16 +22,17 @@ print_r($form);
 
 <?php echo $form->errorSummary($model); ?>
 
+
 <div class='row'>
     <div class="col-sm-6">
-        <?php echo $form->textFieldRow($model, 'nick_name'); ?>
+        <?php echo $form->textFieldGroup($model, 'nick_name'); ?>
     </div>
 </div>
 
 <?php if (!isset($authData['email'])): { ?>
     <div class='row'>
         <div class="col-sm-6">
-            <?php echo $form->textFieldRow($model, 'email'); ?>
+            <?php echo $form->textFieldGroup($model, 'email'); ?>
         </div>
     </div>
 <?php } endif; ?>
@@ -42,8 +43,8 @@ print_r($form);
         'bootstrap.widgets.TbButton',
         array(
             'buttonType' => 'submit',
-            'context'    => 'primary',
-            'label'      => Yii::t('UserModule.user', 'Sign up'),
+            'context' => 'primary',
+            'label' => Yii::t('UserModule.user', 'Sign up'),
         )
     ); ?>
 </div>
