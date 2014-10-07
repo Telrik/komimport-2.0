@@ -1,8 +1,10 @@
 <?php
+//print_r($this);
 $this->pageTitle = Yii::t('UserModule.user', 'Sign up');
 $this->breadcrumbs = array(Yii::t('UserModule.user', 'Sign up'));
-$this->layout = 'default';
 ?>
+
+<?php $this->beginContent('//layouts/default'); ?>
 
 <?php $this->widget('yupe\widgets\YFlashMessages'); ?>
 
@@ -49,3 +51,8 @@ $this->layout = 'default';
 
 <?php $this->endWidget(); ?>
 <!-- form -->
+
+
+
+<?php echo $content; ?>
+<?php $this->endContent(); ?>

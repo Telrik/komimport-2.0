@@ -9,8 +9,8 @@ use LoginForm;
 use RegistrationForm;
 use User;
 use Yii;
-use yupe\components\controllers\FrontController;
 
+use yupe\components\controllers\FrontController;
 use yupe\widgets\YFlashMessages;
 
 class UserController extends FrontController
@@ -42,8 +42,6 @@ class UserController extends FrontController
      */
     public function actionLogin()
     {
-        $this->layout = 'default';
-
         try {
 
             if ($this->service->authenticate()) {
@@ -103,8 +101,13 @@ class UserController extends FrontController
 
     public function actionRegister()
     {
-        $this->layout = 'default';
+        /*$this->layout = 'default';
+        $form = new RegistrationForm();
+        $module = Yii::app()->getModule('user');
+        $this->render('register', array('model' => $form, 'module' => $module));
 
+
+        die('11');*/
 
         $authData = $this->service->getAuthData();
 
@@ -179,8 +182,6 @@ class UserController extends FrontController
 
     public function actionConnect()
     {
-        $this->layout = 'default';
-
 
         if (Yii::app()->getUser()->isAuthenticated()) {
             $this->redirect(Yii::app()->getUser()->returnUrl);
