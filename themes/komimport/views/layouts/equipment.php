@@ -2,17 +2,9 @@
 <div class="row">
     <!-- Primary Content Starts -->
     <div class="col-md-9">
-        <!-- Breadcrumb Starts -->
-        <?php $this->widget(
-            'bootstrap.widgets.TbBreadcrumbs',
-            array(
-                'links' => $this->breadcrumbs,
-            )
-        );?>
-        <!-- Breadcrumb Ends -->
         <?php echo $content; ?>
-        <!-- Primary Content Ends -->
     </div>
+    <!-- Primary Content Ends -->
     <!-- Sidebar Starts -->
     <div class="col-md-3">
         <?php $this->widget('application.widgets.EquipmentSideBar'); ?>

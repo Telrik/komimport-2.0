@@ -1,7 +1,11 @@
 <?php
+$this->pageTitle = 'Техника';
+$this->breadcrumbs = array('Техника');
+$this->description = '';
+$this->keywords = '';
 ?>
 <!-- Main Heading Starts -->
-<h2 class="main-heading2">
+<h2 class="main-heading text-center">
     Техника
 </h2>
 <!-- Main Heading Ends -->
