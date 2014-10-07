@@ -1,7 +1,7 @@
 <?php
-$this->pageTitle = \Yii::app()->getModule('yupe')->siteName . ' - ' . 'Техника: ' . $row['M_name'];
+$this->pageTitle = $row['TE_name'] . ' ' . $row['B_name'] . ' ' . $row['M_name'];
 $this->breadcrumbs = array('Техника', $row['M_name']);
-$this->description = '';
+$this->description = $row['TE_name'] . ' ' . $row['B_name'] . ' ' . $row['M_name'] . ' ' . $row['CONT_name'] . ' ' . $row['CITY_name'];
 $this->keywords = '';
 ?>
 
