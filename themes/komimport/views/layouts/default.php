@@ -114,6 +114,10 @@
             text-decoration: none;
         }
 
+        h4.lead {
+            font-weight: bold;
+        }
+
         /*
         .readmore:hover, .readless:hover {
             text-decoration: none;
