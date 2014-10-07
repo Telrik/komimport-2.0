@@ -1,17 +1,17 @@
 <?php
 namespace application\modules\social\controllers;
 
-use yupe\components\controllers\FrontController;
-use yupe\widgets\YFlashMessages;
 use application\modules\social\components\UserIdentity;
 use application\modules\social\models\SocialUser;
-
-use Yii;
-use EAuthException;
 use CHttpException;
-use User;
-use RegistrationForm;
+use EAuthException;
 use LoginForm;
+use RegistrationForm;
+use User;
+use Yii;
+use yupe\components\controllers\FrontController;
+
+use yupe\widgets\YFlashMessages;
 
 class UserController extends FrontController
 {
@@ -21,7 +21,7 @@ class UserController extends FrontController
     {
         return array(
             'captcha' => array(
-                'class'     => 'yupe\components\actions\YCaptchaAction',
+                'class' => 'yupe\components\actions\YCaptchaAction',
                 'backColor' => 0xFFFFFF,
                 'testLimit' => 1,
                 'minLength' => Yii::app()->getModule('user')->minCaptchaLength,
@@ -42,6 +42,8 @@ class UserController extends FrontController
      */
     public function actionLogin()
     {
+        $this->layout = 'default';
+
         try {
 
             if ($this->service->authenticate()) {
@@ -101,6 +103,9 @@ class UserController extends FrontController
 
     public function actionRegister()
     {
+        $this->layout = 'default';
+
+
         $authData = $this->service->getAuthData();
 
         if (null === $authData || Yii::app()->getUser()->isAuthenticated()) {
@@ -138,8 +143,8 @@ class UserController extends FrontController
 
             $form->setAttributes(
                 array(
-                    'password'   => $password,
-                    'cPassword'  => $password,
+                    'password' => $password,
+                    'cPassword' => $password,
                     'verifyCode' => null
                 )
             );
@@ -174,6 +179,9 @@ class UserController extends FrontController
 
     public function actionConnect()
     {
+        $this->layout = 'default';
+
+
         if (Yii::app()->getUser()->isAuthenticated()) {
             $this->redirect(Yii::app()->getUser()->returnUrl);
         }
