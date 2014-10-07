@@ -1,5 +1,6 @@
 <?php
 $data = \PartistConnector::getOffersEquipmentSpecial();
+shuffle($data);
 $chunks = array_chunk($data, 4, true);
 set_time_limit(60 * 15);
 ?>

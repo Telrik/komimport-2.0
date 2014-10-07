@@ -77,7 +77,7 @@
         }
 
         .product-col > .image {
-            min-height: 135px;
+            min-height: 153px;
 
         }
 

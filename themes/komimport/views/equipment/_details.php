@@ -24,7 +24,7 @@
         </a>
     </div>
     <div class="caption">
-        <h4><a href="/equipment/view/<?php echo $row['OE_id']; ?>"><b><?php echo $row['M_name'] ?></b></a></h4>
+        <h4 style="min-height:35px"><a href="/equipment/view/<?php echo $row['OE_id']; ?>"><b><?php echo $row['M_name'] ?></b></a></h4>
         <h4 style="font-size: 14px"><?php echo $row['TE_name']; ?>, <?php echo $row['B_name']; ?></h4>
 
         <div class="description">
@@ -42,29 +42,28 @@
             <?php } ?>
         </div>
         <div class="cart-button button-group">
-            <a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=/pdf/29_wa420-3_713.pdf"> <i class="fa fa-file-pdf-o"></i></a>
 
             <?php
-            /*
-             <button type="button" title="Wishlist" class="btn btn-wishlist">
-                 <i class="fa fa-pdf"></i>
-                 <?php
-                 if (count($row['OE_IMAGES']['OTHERS']) > 0) {
-                     foreach ($row['OE_IMAGES']['OTHERS'] as $image) {
-                         echo '**http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'];
-                         break;
-                     }
-                 } else
-                     if (count($row['M_IMAGES']['OTHERS']) > 0) {
-                         foreach ($row['M_IMAGES']['OTHERS'] as $image) {
-                             echo 'http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'];
-                             break;
-                         }
-                     }
-                 ?>
-             </button>
-            */
+            //<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=/pdf/29_wa420-3_713.pdf"> <i class="fa fa-file-pdf-o"></i></a>
+            //print_r($row);
+            if (count($row['OE_IMAGES']['OTHERS']) > 0) {
+                foreach ($row['OE_IMAGES']['OTHERS'] as $image) {
+                    echo '<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=' . ('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file']) . '"> <i class="fa fa-file-pdf-o"></i></a>';
+                    //echo '**http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'];
+                    break;
+                }
+            } else
+                if (count($row['M_IMAGES']['OTHERS']) > 0) {
+                    foreach ($row['M_IMAGES']['OTHERS'] as $image) {
+                        echo '<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=' . ('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file']) . '"> <i class="fa fa-file-pdf-o"></i></a>';
+                        //echo 'http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'];
+                        break;
+                    }
+                }
             ?>
+
+
+
             <button type="button" class="btn btn-cart">
                 В корзину
                 <i class="fa fa-shopping-cart"></i>
