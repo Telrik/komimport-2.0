@@ -99,6 +99,10 @@
             text-decoration: none;
         }
 
+        .ymaps-copyright-agreement {
+            display: none !important;
+        }
+
         .btn-wishlist {
             border-radius: 0;
         }
