@@ -52,6 +52,6 @@
                 <li><a tabindex="-1" href="#">История Komatsu</a></li>
             </ul>
         </li>
-
+        <li><a href="/contacts/">Контакты</a></li>
     </ul>
 </div>

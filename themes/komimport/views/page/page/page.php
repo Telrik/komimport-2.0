@@ -1,6 +1,13 @@
-<?php if ($page->layout): ?>
-    <?php $this->layout = "//layouts/{$page->layout}"; ?>
-<?php endif; ?>
+<?php
+
+if ($page->layout) {
+    $this->layout = "//layouts/{$page->layout}";
+
+} else {
+    $this->layout = '//layouts/default';
+}
+?>
+
 
 <?php
 /* @var $page Page */
