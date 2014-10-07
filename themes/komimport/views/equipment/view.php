@@ -153,7 +153,36 @@ $this->keywords = '';
                     <input type="text" name="quantity" value="1" size="2" id="input-quantity" class="form-control"/>
                 </div>
                 <div class="cart-button button-group">
-                    <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-cart">
+
+                    <div class="modal fade" id="myModal_<?php echo $row['OE_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <?php echo CHtml::beginForm(array('//equipment/order'), 'post', array('class' => 'form')); ?>
+                        <div style="display:none"><input type="hidden" name="tech_id" value="<?php echo $row['OE_id']; ?>"></div>
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Заказать: <?php echo $row['TE_name'] . ' ' . $row['B_name'] . ' ' . $row['M_name']; ?></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="LoginForm_email" class="control-label required">Email <span class="required">*</span></label>
+                                                <?php echo CHtml::textField('email', '', array('placeholder' => '', 'required' => "required", 'class' => 'form-control')) ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                                    <button type="button" type="submit" class="order_tech btn btn-warning">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                        <?php echo CHtml::endForm(''); ?>
+                    </div>
+
+                    <button type="button" data-toggle="modal" data-target="#myModal_<?php echo $row['OE_id']; ?>" class="btn btn-cart">
                         Заказать сейчас
                         <i class="fa fa-shopping-cart"></i>
                     </button>
@@ -254,30 +283,3 @@ $this->keywords = '';
 <!-- Related Products Ends -->
 
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <?php echo CHtml::beginForm(array('//equipment/order'), 'post', array('class' => 'form')); ?>
-    <div style="display:none"><input type="hidden" name="tech_id" value="<?php echo $row['OE_id']; ?>"></div>
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Заказать: <?php echo $this->pageTitle; ?></h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="LoginForm_email" class="control-label required">Email <span class="required">*</span></label>
-                            <?php echo CHtml::textField('email', '', array('placeholder' => '', 'required' => "required", 'class' => 'form-control')) ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                <button type="button" type="submit" class="order_tech btn btn-warning">Заказать</button>
-            </div>
-        </div>
-    </div>
-    <?php echo CHtml::endForm(''); ?>
-</div>
