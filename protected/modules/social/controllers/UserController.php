@@ -8,8 +8,8 @@ use EAuthException;
 use LoginForm;
 use RegistrationForm;
 use User;
-use Yii;
 
+use Yii;
 use yupe\components\controllers\FrontController;
 use yupe\widgets\YFlashMessages;
 
@@ -31,6 +31,8 @@ class UserController extends FrontController
 
     protected function beforeAction($action)
     {
+        $this->layout = '//layouts/default';
+
         $id = Yii::app()->getRequest()->getQuery('service');
         $this->service = Yii::app()->getComponent('eauth')->getIdentity($id);
 
@@ -101,13 +103,10 @@ class UserController extends FrontController
 
     public function actionRegister()
     {
-        /*$this->layout = 'default';
         $form = new RegistrationForm();
         $module = Yii::app()->getModule('user');
         $this->render('register', array('model' => $form, 'module' => $module));
-
-
-        die('11');*/
+        die('11');
 
         $authData = $this->service->getAuthData();
 
@@ -182,7 +181,6 @@ class UserController extends FrontController
 
     public function actionConnect()
     {
-
         if (Yii::app()->getUser()->isAuthenticated()) {
             $this->redirect(Yii::app()->getUser()->returnUrl);
         }
