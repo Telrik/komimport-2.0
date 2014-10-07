@@ -4,42 +4,32 @@ shuffle($data);
 $chunks = array_chunk($data, 4, true);
 set_time_limit(60 * 15);
 ?>
-
+<!-- Controls -->
 <button href="#carousel-offers-special1" role="button" data-slide="prev" style="margin-top:-30px;margin-right: 60px;" class="btn-xs pull-right btn"><span class="glyphicon glyphicon-chevron-left"></span></button>
 <button href="#carousel-offers-special1" role="button" data-slide="next" style="margin-top:-30px" class="btn-xs pull-right btn"><span class="glyphicon glyphicon-chevron-right"></span></button>
 
-
-<a style="top:-30px;position:absolute;height:30px;" class="left carousel-control1" href="#carousel-offers-special11" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-</a>
-<a style="top:-30px;position:absolute;height:30px;" class="right carousel-1" href="#carousel-offers-special1" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-</a>
 <div style="background-color: #FFF;" id="carousel-offers-special1" class="carousel slide" data-interval="150000" data-ride="carousel">
-    <!-- Controls -->
-
-
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
             <div class="row">
                 <div class="col-md-2 col-sm-6">
-                    <img src="http://komimport.local/sites/default/files/styles/logo/public/komatsu.jpg"/>
+                    <img src="/images/logo/public/komatsu.jpg"/>
                 </div>
                 <div class="col-md-2 col-sm-6">
-                    <img src="http://komimport.local/sites/default/files/styles/logo/public/images.jpg?itok=SYPn9UMD"/>
+                    <img src="/images/logo/public/images.jpg?itok=SYPn9UMD"/>
                 </div>
                 <div class="col-md-2 col-sm-6">
-                    <img src="http://komimport.local/sites/default/files/styles/logo/public/imgres.jpg?itok=SYPn9UMD"/>
+                    <img src="/images/logo/public/imgres.jpg?itok=SYPn9UMD"/>
                 </div>
                 <div class="col-md-2 col-sm-6">
-                    <img src="http://komimport.local/sites/default/files/styles/logo/public/imgres_0.jpg?itok=SYPn9UMD"/>
+                    <img src="/images/logo/public/imgres_0.jpg?itok=SYPn9UMD"/>
                 </div>
                 <div class="col-md-2 col-sm-6">
-                    <img src="http://komimport.local/sites/default/files/styles/logo/public/imgres_1.jpg?itok=SYPn9UMD"/>
+                    <img src="/images/logo/public/imgres_1.jpg?itok=SYPn9UMD"/>
                 </div>
                 <div class="col-md-2 col-sm-6">
-                    <img src="http://komimport.local/sites/default/files/styles/logo/public/imgres_2.jpg?itok=SYPn9UMD"/>
+                    <img src="/images/logo/public/imgres_2.jpg?itok=SYPn9UMD"/>
                 </div>
 
             </div>
@@ -49,10 +39,10 @@ set_time_limit(60 * 15);
         <div class="item">
             <div class="row">
                 <div class="col-md-2 col-sm-6">
-                    <img src="http://komimport.local/sites/default/files/styles/logo/public/imgres_3.jpg?itok=SYPn9UMD"/>
+                    <img src="/images/logo/public/imgres_3.jpg?itok=SYPn9UMD"/>
                 </div>
                 <div class="col-md-2 col-sm-6">
-                    <img src="http://komimport.local/sites/default/files/styles/logo/public/imgres_4.jpg?itok=SYPn9UMD"/>
+                    <img src="/images/logo/public/imgres_4.jpg?itok=SYPn9UMD"/>
                 </div>
             </div>
         </div>
