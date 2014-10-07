@@ -10,7 +10,7 @@ $this->breadcrumbs = array(Yii::t('UserModule.user', 'Sign up'));
     array(
         'id'           => 'social-registration-form',
         'type'         => 'vertical',
-        'inlineErrors' => true,
+        //'inlineErrors' => true,
         'htmlOptions'  => array(
             'class' => 'well',
         )
