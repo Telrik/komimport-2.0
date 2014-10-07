@@ -323,6 +323,15 @@
     <!-- flashMessages -->
     <?php $this->widget('yupe\widgets\YFlashMessages'); ?>
 
+    <!-- Breadcrumb Starts -->
+    <?php $this->widget(
+        'bootstrap.widgets.TbBreadcrumbs',
+        array(
+            'links' => $this->breadcrumbs,
+        )
+    );?>
+    <!-- Breadcrumb Ends -->
+
     <?php echo $content; ?>
 </div>
 

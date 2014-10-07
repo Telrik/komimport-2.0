@@ -1,18 +1,22 @@
 <?php
+
+$this->layout = '//layouts/default';
 $this->pageTitle = Yii::t('FeedbackModule.feedback', 'Contacts');
 $this->breadcrumbs = array(Yii::t('FeedbackModule.feedback', 'Contacts'));
-$this->layout = '//layouts/default';
+
+
 Yii::import('application.modules.feedback.FeedbackModule');
 Yii::import('application.modules.install.InstallModule');
 //<script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
 
+
 ?>
 
-
 <!-- Main Heading Starts -->
-<h1 class="main-heading text-center">
-    <?php echo Yii::t('FeedbackModule.feedback', 'Contacts'); ?>
-</h1>
+<h2 class="main-heading text-center">
+    <?php echo Yii::t('FeedbackModule.feedback', 'Contacts'); ?><br />
+    <span>Свяжитесь с нами</span>
+</h2>
 <!-- Main Heading Ends -->
 
 <?php $this->widget('yupe\widgets\YFlashMessages'); ?>

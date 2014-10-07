@@ -2,6 +2,7 @@
 <h1><?php echo $this->pageTitle; ?></h1>
 <?php $this->renderPartial('_slider_offers_special'); ?>
 
+
 <div style="margin:15px">
     <h3>Наши основные преимущества:</h3>
     <ul>
