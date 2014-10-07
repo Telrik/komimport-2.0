@@ -31,7 +31,7 @@ class EasyImage extends CApplicationComponent
 	private $_image;
 	public $driver = 'GD'; // GD, Imagick
 	public $quality = 100;
-	public $cachePath = '/assets/easyimage/'; //relative web root (recommended: /assets/easyimage/)
+	public $cachePath = '/public/assets/easyimage/'; //relative web root (recommended: /assets/easyimage/)
 	public $cacheTime = 2592000; // 30 days
 	public $retinaSupport = false;
 

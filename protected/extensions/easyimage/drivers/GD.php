@@ -14,9 +14,6 @@ class Image_GD extends Image
 	// Is GD bundled or separate?
 	protected static $_bundled;
 
-    function _imagecreatefrom_s3($filename) {
-        return imagecreatefromstring(Yii::app()->fileSystem->readString($filename));
-    }
 	/**
 	 * Checks if GD is enabled and bundled. Bundled GD is required for some
 	 * methods to work. Exceptions will be thrown from those methods when GD is
@@ -87,7 +84,7 @@ class Image_GD extends Image
 		// Set the image creation function name
 		switch ($this->type) {
 			case IMAGETYPE_JPEG:
-				$create = '_imagecreatefrom_s3';
+				$create = 'imagecreatefromjpeg';
 				break;
 			case IMAGETYPE_GIF:
 				$create = 'imagecreatefromgif';
