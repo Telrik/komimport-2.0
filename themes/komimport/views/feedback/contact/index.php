@@ -14,7 +14,7 @@ Yii::import('application.modules.install.InstallModule');
 
 <!-- Main Heading Starts -->
 <h2 class="main-heading text-center">
-    <?php echo Yii::t('FeedbackModule.feedback', 'Contacts'); ?><br />
+    <?php echo Yii::t('FeedbackModule.feedback', 'Contacts'); ?><br/>
     <span>Свяжитесь с нами</span>
 </h2>
 <!-- Main Heading Ends -->
@@ -22,9 +22,9 @@ Yii::import('application.modules.install.InstallModule');
 <?php $this->widget('yupe\widgets\YFlashMessages'); ?>
 
 <!-- Google Map Starts -->
-<div id="map-wrapper">
+<div id="map-wrapper" style="height: 290px;">
     <!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (начало) -->
-    <div id="ymaps-map-id_1346839684571708029893" style="width: 100%; height: 250px;"></div>
+    <div id="ymaps-map-id_1346839684571708029893" style="width: 100%; height: 290px;"></div>
     <div style="display:none;width: 100%; text-align: right;"><a href="http://api.yandex.ru/maps/tools/constructor/?lang=ru-RU" target="_blank" style="color: #1A3DC1; font: 13px Arial,Helvetica,sans-serif;">Создано с помощью инструментов
             Яндекс.Карт</a></div>
     <script type="text/javascript">function fid_1346839684571708029893(ymaps) {
