@@ -99,6 +99,21 @@
             text-decoration: none;
         }
 
+        .btn-wishlist {
+            border-radius: 0;
+        }
+
+        .btn-wishlist {
+            background: none repeat scroll 0 0 #2f353b;
+            color: #fff;
+            margin-right: 3px;
+        }
+
+        .btn-wishlist:hover, .btn-wishlist:focus {
+            color: #FFF;
+            text-decoration: none;
+        }
+
         /*
         .readmore:hover, .readless:hover {
             text-decoration: none;

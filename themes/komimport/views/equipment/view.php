@@ -99,6 +99,72 @@ $this->keywords = '';
                 <p class="price-tax"></p>
             </div>
             <!-- Price Ends -->
+
+            <hr/>
+            <!-- Available Options Starts -->
+            <div class="options">
+                <!--<h3>Available Options</h3>
+
+                <div class="form-group">
+                    <label for="select" class="control-label text-uppercase">Select:</label>
+                    <select name="select" id="select" class="form-control">
+                        <option value="1" selected>Select</option>
+                        <option value="2">Option 1</option>
+                        <option value="3">Option 1</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label text-uppercase">Radio:</label>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            Option one is this and that&mdash;be sure to include why it's great
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Option two can be something else and selecting it will deselect option one
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label text-uppercase">Checkbox:</label>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">
+                            Option one is this and that&mdash;be sure to include why it's great
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" checked>
+                            Option two is checked
+                        </label>
+                    </div>
+                </div>-->
+
+                <div class="form-group">
+                    <label class="control-label text-uppercase" for="input-quantity">Кол-во:</label>
+                    <input type="text" name="quantity" value="1" size="2" id="input-quantity" class="form-control"/>
+                </div>
+                <div class="cart-button button-group">
+                    <button type="button" title="Wishlist" class="btn btn-wishlist">
+                        <i class="fa fa-heart"></i>
+                    </button>
+                    <button type="button" title="Compare" class="btn btn-compare">
+                        <i class="fa fa-bar-chart-o"></i>
+                    </button>
+                    <button type="button" class="btn btn-cart">
+                        Add to cart
+                        <i class="fa fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Available Options Ends -->
+
         </div>
     </div>
     <!-- Right Ends -->
@@ -124,6 +190,21 @@ $this->keywords = '';
             <p>
                 <?php echo $row['OE_caption']; ?>
             </p>
+            <hr/>
+            <?php
+            if (count($row['OE_IMAGES']['OTHERS']) > 0) {
+                foreach ($row['OE_IMAGES']['OTHERS'] as $image) {
+                    echo '<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=' . ('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file']) . '"> <i class="fa fa-file-pdf-o"></i></a>';
+                    break;
+                }
+            } else
+                if (count($row['M_IMAGES']['OTHERS']) > 0) {
+                    foreach ($row['M_IMAGES']['OTHERS'] as $image) {
+                        echo '<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=' . ('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file']) . '"> <i class="fa fa-file-pdf-o"></i></a>';
+                        break;
+                    }
+                }
+            ?>
         </div>
         <!-- Description Ends -->
         <!-- Specification Starts -->
