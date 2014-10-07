@@ -14,7 +14,7 @@ class Google extends GoogleOAuthService
             $this->setState(
                 self::AUTH_DATA_KEY,
                 array(
-                    'email'   => $this->email,
+                    //'email'   => $this->email,
                     'uid'     => $this->getId(),
                     'service' => $this->getServiceName(),
                     'type'    => $this->getServiceType(),
