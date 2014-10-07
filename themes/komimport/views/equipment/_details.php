@@ -48,14 +48,14 @@
             //print_r($row);
             if (count($row['OE_IMAGES']['OTHERS']) > 0) {
                 foreach ($row['OE_IMAGES']['OTHERS'] as $image) {
-                    echo '<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=' . ('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file']) . '"> <i class="fa fa-file-pdf-o"></i></a>';
+                    echo '<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://new.komimport.ru/pdfjs/web/viewer.html?file=' . ('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file']) . '"> <i class="fa fa-file-pdf-o"></i></a>';
                     //echo '**http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'];
                     break;
                 }
             } else
                 if (count($row['M_IMAGES']['OTHERS']) > 0) {
                     foreach ($row['M_IMAGES']['OTHERS'] as $image) {
-                        echo '<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://komimport.again/pdfjs/web/viewer.html?file=' . ('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file']) . '"> <i class="fa fa-file-pdf-o"></i></a>';
+                        echo '<a title="Брошюра" data-rel="shadowbox;player=iframe" class="btn btn-wishlist" href="http://new.komimport.ru/pdfjs/web/viewer.html?file=' . ('http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file']) . '"> <i class="fa fa-file-pdf-o"></i></a>';
                         //echo 'http://partist.ru/' . $image['F_directory'] . '/' . $image['F_file'];
                         break;
                     }
