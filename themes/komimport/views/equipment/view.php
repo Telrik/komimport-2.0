@@ -55,7 +55,7 @@ $this->keywords = '';
     <div class="col-sm-8 product-details">
         <div class="panel-smart">
             <!-- Product Name Starts -->
-            <h2><?php echo $row['M_name']; ?></h2>
+            <h1><?php echo $row['M_name']; ?></h1>
             <!-- Product Name Ends -->
             <hr/>
             <!-- Manufacturer Starts -->
