@@ -44,6 +44,50 @@ $(document).ready(function () {
         $(this).tab('show');
     });
 
+    function IsEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+
+    $('.order_tech').click(function (e) {
+        var modal = $(this).parents('div.modal');
+        var email = modal.find('input[name=email]').val();
+        var id = modal.find('input[name=tech_id]').val();
+
+        if (!IsEmail(email)) {
+            alert('Email is not valid');
+            return;
+        }
+
+        $.ajax({
+            url: 'http://partist.ru/connector.php?type=save_cart&email=' + email + '&position_tech[' + id + ']=1',
+            dataType: 'json',
+            type: 'get',
+            success: function (data) {
+
+                modal.modal('hide');
+                
+                if (typeof data.data != 'undefined' && typeof data.result != 'undefined') {
+
+                }
+                else {
+
+                }
+
+
+            },
+            error: function (data) {
+                if (typeof data.data != 'undefined' && typeof data.result != 'undefined') {
+                } else {
+                }
+            }
+        });
+
+
+        //zzz = $(this);
+    });
+
+
     // TOOLTIP
     $(".header-links .fa, .tool-tip").tooltip({
         placement: "bottom"
