@@ -217,7 +217,7 @@
 
                     <div id="cart-new" class="pull-right btn-group btn-block">
 
-                        <button type="button" data-toggle="dropdown" class="btn-xs btn btn-block btn-lg btn-warning dropdown-toggle">
+                        <button type="button" data-toggle="dropdown" class="btn-xs btn btn-block btn-lg btn-success dropdown-toggle">
                             <i class="fa fa-shopping-cart"></i>
 
                             <span class="hidden-md">Корзина</span>
