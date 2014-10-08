@@ -40,6 +40,20 @@
                         <li><a tabindex="-1" href="">Факторинг</a></li>
                         <li><a tabindex="-1" href="">Условия лизинга</a></li>
                     </ul>
+                    <ul class="list-unstyled" style="width:230px">
+                        <li class="dropdown-header">Другое</li>
+                        <li><a tabindex="-1" href="">Монтаж</a></li>
+                        <li><a tabindex="-1" href="">Техника Komatsu в лизинг</a></li>
+                        <li><a tabindex="-1" href="">Факторинг</a></li>
+                        <li><a tabindex="-1" href="">Условия лизинга</a></li>
+                    </ul>
+                    <ul class="list-unstyled" style="width:230px">
+                        <li class="dropdown-header">Другое</li>
+                        <li><a tabindex="-1" href="">Монтаж</a></li>
+                        <li><a tabindex="-1" href="">Техника Komatsu в лизинг</a></li>
+                        <li><a tabindex="-1" href="">Факторинг</a></li>
+                        <li><a tabindex="-1" href="">Условия лизинга</a></li>
+                    </ul>
 
                 </div>
             </div>
