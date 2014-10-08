@@ -1,7 +1,5 @@
 <div class="collapse navbar-collapse navbar-cat-collapse">
     <ul class="nav navbar-nav">
-        <li><a href="/equipment/">Техника</a></li>
-        <!--
         <li class="dropdown">
             <a href="#0" class="dropdown-toggle" data-hover="dropdown" data-delay="10">
                 Запчасти
@@ -18,8 +16,12 @@
             </ul>
         </li>
 
+        <li><a href="/equipment/">Техника</a></li>
+        <li><a href="/equipment/">Каталоги запчастей</a></li>
+
+
         <li class="dropdown">
-            <a href="#1" class="dropdown-toggle" data-hover="dropdown" data-delay="10">Услуги</a>
+            <a href="#1" class="dropdown-toggle" data-hover="dropdown" data-delay="10">Сервис и ТО</a>
 
             <div class="dropdown-menu">
                 <div class="dropdown-inner" style="width:530px">
@@ -54,7 +56,7 @@
             </ul>
         </li>
 
-        -->
+
         <li><a href="/contacts/">Контакты</a></li>
     </ul>
 </div>

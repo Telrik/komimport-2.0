@@ -120,6 +120,7 @@
 
         h4.lead {
             font-weight: bold;
+            line-height: 1.3;
         }
 
         /*
@@ -171,16 +172,21 @@
                 </div>
                 <!-- Logo Starts -->
 
+                <div class="col-md-3">
 
-                <div style="" class="col-md-5">
-                    <h4 style="margin: 0 ;display: block;" class="lead lead-test">
-                        <i class="fa fa-phone"></i> <span data-toggle="tooltip" data-placement="right" title="Прием звонков: пн-пт 7.00 - 18.00"> 8-495-651-61-19</span>
+
+                </div>
+
+                <div style="" class="col-md-2">
+                    <h4 style="margin: 0 ;display: block;white-space: nowrap;" class="lead lead-test">
+                        <i class="fa fa-phone"></i>&nbsp;<span data-toggle="tooltip" data-placement="left" title="Прием звонков: пн-пт 7.00 - 18.00">8-495-651-61-19</span>
                     </h4>
-                    <h4 style="margin: 0" class="lead lead-test">
-                        <i class="fa fa-phone"></i> <span data-toggle="tooltip" data-placement="right" title="Бесплатный по России"> 8-800-555-61-19</span>
+                    <h4 style="margin: 0;white-space: nowrap;" class="lead lead-test">
+                        <i class="fa fa-phone"></i>&nbsp;<span data-toggle="tooltip" data-placement="left" title="Бесплатный по России">8-800-555-61-19</span>
                     </h4>
                 </div>
-                <div class="col-md-3">
+
+                <div class="col-md-2">
                     <p>
                         <i class="fa fa-envelope"></i> <a href="mailto:zakaz@komimport.ru">zakaz@komimport.ru</a>
                     </p>
