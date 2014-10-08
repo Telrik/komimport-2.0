@@ -123,6 +123,20 @@
             line-height: 1.3;
         }
 
+        #main-menu .navbar-nav > li.open a {
+            background: transparent;
+        }
+
+        #main-menu .dropdown-menu {
+            background: url("http://subtlepatterns.com/patterns/carbon_fibre.png") repeat scroll 0% 0% transparent;
+        }
+
+        #main-menu .navbar-nav > li.open a:hover {
+            color: #fcb500;
+            text-decoration: underline;
+            /*background: none;/* url("http://subtlepatterns.com/patterns/carbon_fibre.png") repeat scroll 0% 0% transparent;*/
+        }
+
         /*
         .readmore:hover, .readless:hover {
             text-decoration: none;
