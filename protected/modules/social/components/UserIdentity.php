@@ -25,6 +25,9 @@ class UserIdentity extends CBaseUserIdentity
 
     public function authenticate()
     {
+        //$authData = $this->service->getAuthData();
+        //print_r($this->service);
+
         $storage = SocialUser::model()
             ->with('user')
             ->find(
@@ -35,6 +38,7 @@ class UserIdentity extends CBaseUserIdentity
                 )
             );
 
+        //if (null === $storage) print "zzz";
         if (null === $storage || !$storage->user->isActive()) {
             return false;
         }

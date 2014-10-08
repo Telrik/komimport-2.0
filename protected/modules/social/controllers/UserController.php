@@ -8,9 +8,9 @@ use EAuthException;
 use LoginForm;
 use RegistrationForm;
 use User;
-
 use Yii;
 use yupe\components\controllers\FrontController;
+
 use yupe\widgets\YFlashMessages;
 
 class UserController extends FrontController
@@ -32,7 +32,6 @@ class UserController extends FrontController
     protected function beforeAction($action)
     {
         $this->layout = '//layouts/default';
-
         $id = Yii::app()->getRequest()->getQuery('service');
         $this->service = Yii::app()->getComponent('eauth')->getIdentity($id);
 
@@ -44,12 +43,12 @@ class UserController extends FrontController
      */
     public function actionLogin()
     {
+        //$authData = $this->service->getAuthData();
+
         try {
 
             if ($this->service->authenticate()) {
-
                 $identity = new UserIdentity($this->service);
-
                 if ($identity->authenticate() && Yii::app()->getUser()->login($identity)) {
 
                     Yii::app()->getUser()->setFlash(
@@ -103,11 +102,6 @@ class UserController extends FrontController
 
     public function actionRegister()
     {
-        $form = new RegistrationForm();
-        $module = Yii::app()->getModule('user');
-        $this->render('register', array('model' => $form, 'module' => $module));
-        die('11');
-
         $authData = $this->service->getAuthData();
 
         if (null === $authData || Yii::app()->getUser()->isAuthenticated()) {
@@ -158,8 +152,10 @@ class UserController extends FrontController
                     $social = new SocialUser();
                     $social->user_id = $user->id;
                     $social->provider = $authData['service'];
-                    $social->uid = $authData['uid'];
+                    $social->uid = $authData['info']['id'];
+
                     if ($social->save()) {
+
                         Yii::app()->getUser()->setFlash(
                             YFlashMessages::SUCCESS_MESSAGE,
                             Yii::t(
@@ -168,15 +164,35 @@ class UserController extends FrontController
                             )
                         );
 
-                        $this->redirect(array($module->registrationSuccess));
+                        $user->status = User::STATUS_ACTIVE;
+                        if ($user->save()) {
+                            $this->redirect(array('/social/login', 'service' => $this->service->getServiceName()));
+                        }
+                        //$this->redirect(array($module->registrationSuccess));
                     }
+
+                    //print_r($form);
+                    /*$user->status = User::STATUS_ACTIVE;
+                    if ($user->save()) {
+                        $identity = new UserIdentity($this->service);
+                        if ($identity->authenticate() && Yii::app()->getUser()->login($identity)) {
+
+                            $redirect = (Yii::app()->getUser()->isSuperUser() && $module->loginAdminSuccess)
+                                ? array($module->loginAdminSuccess)
+                                : array($module->loginSuccess);
+
+                            $this->redirect(Yii::app()->getUser()->getReturnUrl($redirect));
+                            //$this->redirect(array('/')); //array($module->registrationSuccess));
+                        }
+                    }*/
+
                 }
             }
 
-            $form->addError('', Yii::t('SocialModule.social', 'Error!'));
+            //$form->addError('', Yii::t('SocialModule.social', 'Error!'));
         }
 
-        $this->render('register', array('model' => $form, 'module' => $module));
+        $this->render('register', array('authData' => $authData, 'model' => $form, 'module' => $module));
     }
 
     public function actionConnect()

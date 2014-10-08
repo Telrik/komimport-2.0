@@ -1,0 +1,396 @@
+application\modules\social\components\services\Google Object
+(
+    [name:protected] => google
+    [title:protected] => Google
+    [type:protected] => OAuth
+    [jsArguments:protected] => Array
+        (
+            [popup] => Array
+                (
+                    [width] => 500
+                    [height] => 450
+                )
+
+        )
+
+    [client_id:protected] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+    [client_secret:protected] => 9aK37f_dqQONDVpCwO4i-2gr
+    [scope:protected] => https://www.googleapis.com/auth/userinfo.profile
+    [providerOptions:protected] => Array
+        (
+            [authorize] => https://accounts.google.com/o/oauth2/auth
+            [access_token] => https://accounts.google.com/o/oauth2/token
+        )
+
+    [access_token:protected] => 
+    [errorParam:protected] => error
+    [errorDescriptionParam:protected] => error_description
+    [errorAccessDeniedCode:protected] => access_denied
+    [attributes:protected] => Array
+        (
+        )
+
+    [authenticated:protected] => 
+    [fetched:EAuthServiceBase:private] => 
+    [component:EAuthServiceBase:private] => EAuth Object
+        (
+            [services] => Array
+                (
+                    [google] => Array
+                        (
+                            [class] => application\modules\social\components\services\Google
+                            [client_id] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+                            [client_secret] => 9aK37f_dqQONDVpCwO4i-2gr
+                            [title] => Google
+                        )
+
+                )
+
+            [popup] => 
+            [cache] => cache
+            [cacheExpire] => 0
+            [redirectView:protected] => redirect
+            [behaviors] => Array
+                (
+                )
+
+            [_initialized:CApplicationComponent:private] => 
+            [_e:CComponent:private] => 
+            [_m:CComponent:private] => 
+        )
+
+    [redirectUrl:EAuthServiceBase:private] => /backend
+    [cancelUrl:EAuthServiceBase:private] => http://new.komimport.ru/social/login/service/google
+    [_e:CComponent:private] => 
+    [_m:CComponent:private] => 
+)
+application\modules\social\components\services\Google Object
+(
+    [name:protected] => google
+    [title:protected] => Google
+    [type:protected] => OAuth
+    [jsArguments:protected] => Array
+        (
+            [popup] => Array
+                (
+                    [width] => 500
+                    [height] => 450
+                )
+
+        )
+
+    [client_id:protected] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+    [client_secret:protected] => 9aK37f_dqQONDVpCwO4i-2gr
+    [scope:protected] => https://www.googleapis.com/auth/userinfo.profile
+    [providerOptions:protected] => Array
+        (
+            [authorize] => https://accounts.google.com/o/oauth2/auth
+            [access_token] => https://accounts.google.com/o/oauth2/token
+        )
+
+    [access_token:protected] => 
+    [errorParam:protected] => error
+    [errorDescriptionParam:protected] => error_description
+    [errorAccessDeniedCode:protected] => access_denied
+    [attributes:protected] => Array
+        (
+        )
+
+    [authenticated:protected] => 
+    [fetched:EAuthServiceBase:private] => 
+    [component:EAuthServiceBase:private] => EAuth Object
+        (
+            [services] => Array
+                (
+                    [google] => Array
+                        (
+                            [class] => application\modules\social\components\services\Google
+                            [client_id] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+                            [client_secret] => 9aK37f_dqQONDVpCwO4i-2gr
+                            [title] => Google
+                        )
+
+                )
+
+            [popup] => 
+            [cache] => cache
+            [cacheExpire] => 0
+            [redirectView:protected] => redirect
+            [behaviors] => Array
+                (
+                )
+
+            [_initialized:CApplicationComponent:private] => 
+            [_e:CComponent:private] => 
+            [_m:CComponent:private] => 
+        )
+
+    [redirectUrl:EAuthServiceBase:private] => /backend
+    [cancelUrl:EAuthServiceBase:private] => http://new.komimport.ru/social/login/service/google
+    [_e:CComponent:private] => 
+    [_m:CComponent:private] => 
+)
+application\modules\social\components\services\Google Object
+(
+    [name:protected] => google
+    [title:protected] => Google
+    [type:protected] => OAuth
+    [jsArguments:protected] => Array
+        (
+            [popup] => Array
+                (
+                    [width] => 500
+                    [height] => 450
+                )
+
+        )
+
+    [client_id:protected] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+    [client_secret:protected] => 9aK37f_dqQONDVpCwO4i-2gr
+    [scope:protected] => https://www.googleapis.com/auth/userinfo.profile
+    [providerOptions:protected] => Array
+        (
+            [authorize] => https://accounts.google.com/o/oauth2/auth
+            [access_token] => https://accounts.google.com/o/oauth2/token
+        )
+
+    [access_token:protected] => 
+    [errorParam:protected] => error
+    [errorDescriptionParam:protected] => error_description
+    [errorAccessDeniedCode:protected] => access_denied
+    [attributes:protected] => Array
+        (
+        )
+
+    [authenticated:protected] => 
+    [fetched:EAuthServiceBase:private] => 
+    [component:EAuthServiceBase:private] => EAuth Object
+        (
+            [services] => Array
+                (
+                    [google] => Array
+                        (
+                            [class] => application\modules\social\components\services\Google
+                            [client_id] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+                            [client_secret] => 9aK37f_dqQONDVpCwO4i-2gr
+                            [title] => Google
+                        )
+
+                )
+
+            [popup] => 
+            [cache] => cache
+            [cacheExpire] => 0
+            [redirectView:protected] => redirect
+            [behaviors] => Array
+                (
+                )
+
+            [_initialized:CApplicationComponent:private] => 
+            [_e:CComponent:private] => 
+            [_m:CComponent:private] => 
+        )
+
+    [redirectUrl:EAuthServiceBase:private] => /
+    [cancelUrl:EAuthServiceBase:private] => http://new.komimport.ru/social/login/service/google
+    [_e:CComponent:private] => 
+    [_m:CComponent:private] => 
+)
+application\modules\social\components\services\Google Object
+(
+    [name:protected] => google
+    [title:protected] => Google
+    [type:protected] => OAuth
+    [jsArguments:protected] => Array
+        (
+            [popup] => Array
+                (
+                    [width] => 500
+                    [height] => 450
+                )
+
+        )
+
+    [client_id:protected] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+    [client_secret:protected] => 9aK37f_dqQONDVpCwO4i-2gr
+    [scope:protected] => https://www.googleapis.com/auth/userinfo.profile
+    [providerOptions:protected] => Array
+        (
+            [authorize] => https://accounts.google.com/o/oauth2/auth
+            [access_token] => https://accounts.google.com/o/oauth2/token
+        )
+
+    [access_token:protected] => 
+    [errorParam:protected] => error
+    [errorDescriptionParam:protected] => error_description
+    [errorAccessDeniedCode:protected] => access_denied
+    [attributes:protected] => Array
+        (
+        )
+
+    [authenticated:protected] => 
+    [fetched:EAuthServiceBase:private] => 
+    [component:EAuthServiceBase:private] => EAuth Object
+        (
+            [services] => Array
+                (
+                    [google] => Array
+                        (
+                            [class] => application\modules\social\components\services\Google
+                            [client_id] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+                            [client_secret] => 9aK37f_dqQONDVpCwO4i-2gr
+                            [title] => Google
+                        )
+
+                )
+
+            [popup] => 
+            [cache] => cache
+            [cacheExpire] => 0
+            [redirectView:protected] => redirect
+            [behaviors] => Array
+                (
+                )
+
+            [_initialized:CApplicationComponent:private] => 
+            [_e:CComponent:private] => 
+            [_m:CComponent:private] => 
+        )
+
+    [redirectUrl:EAuthServiceBase:private] => /
+    [cancelUrl:EAuthServiceBase:private] => http://new.komimport.ru/social/login/service/google
+    [_e:CComponent:private] => 
+    [_m:CComponent:private] => 
+)
+application\modules\social\components\services\Google Object
+(
+    [name:protected] => google
+    [title:protected] => Google
+    [type:protected] => OAuth
+    [jsArguments:protected] => Array
+        (
+            [popup] => Array
+                (
+                    [width] => 500
+                    [height] => 450
+                )
+
+        )
+
+    [client_id:protected] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+    [client_secret:protected] => 9aK37f_dqQONDVpCwO4i-2gr
+    [scope:protected] => https://www.googleapis.com/auth/userinfo.profile
+    [providerOptions:protected] => Array
+        (
+            [authorize] => https://accounts.google.com/o/oauth2/auth
+            [access_token] => https://accounts.google.com/o/oauth2/token
+        )
+
+    [access_token:protected] => ya29.lwAVk1nx7JVi8J5WQBHhMzveiMCxqCbZIMcjPHrgm9LTSsegBeZex0EE
+    [errorParam:protected] => error
+    [errorDescriptionParam:protected] => error_description
+    [errorAccessDeniedCode:protected] => access_denied
+    [attributes:protected] => Array
+        (
+        )
+
+    [authenticated:protected] => 1
+    [fetched:EAuthServiceBase:private] => 
+    [component:EAuthServiceBase:private] => EAuth Object
+        (
+            [services] => Array
+                (
+                    [google] => Array
+                        (
+                            [class] => application\modules\social\components\services\Google
+                            [client_id] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+                            [client_secret] => 9aK37f_dqQONDVpCwO4i-2gr
+                            [title] => Google
+                        )
+
+                )
+
+            [popup] => 
+            [cache] => cache
+            [cacheExpire] => 0
+            [redirectView:protected] => redirect
+            [behaviors] => Array
+                (
+                )
+
+            [_initialized:CApplicationComponent:private] => 
+            [_e:CComponent:private] => 
+            [_m:CComponent:private] => 
+        )
+
+    [redirectUrl:EAuthServiceBase:private] => /
+    [cancelUrl:EAuthServiceBase:private] => http://new.komimport.ru/social/login/service/google
+    [_e:CComponent:private] => 
+    [_m:CComponent:private] => 
+)
+application\modules\social\components\services\Google Object
+(
+    [name:protected] => google
+    [title:protected] => Google
+    [type:protected] => OAuth
+    [jsArguments:protected] => Array
+        (
+            [popup] => Array
+                (
+                    [width] => 500
+                    [height] => 450
+                )
+
+        )
+
+    [client_id:protected] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+    [client_secret:protected] => 9aK37f_dqQONDVpCwO4i-2gr
+    [scope:protected] => https://www.googleapis.com/auth/userinfo.profile
+    [providerOptions:protected] => Array
+        (
+            [authorize] => https://accounts.google.com/o/oauth2/auth
+            [access_token] => https://accounts.google.com/o/oauth2/token
+        )
+
+    [access_token:protected] => ya29.lwDTJ-US0PqbTSWxw7GYhbLWv89KJTnLcfjtSPh4zPAgOA2Kmkj7jD3h
+    [errorParam:protected] => error
+    [errorDescriptionParam:protected] => error_description
+    [errorAccessDeniedCode:protected] => access_denied
+    [attributes:protected] => Array
+        (
+        )
+
+    [authenticated:protected] => 1
+    [fetched:EAuthServiceBase:private] => 
+    [component:EAuthServiceBase:private] => EAuth Object
+        (
+            [services] => Array
+                (
+                    [google] => Array
+                        (
+                            [class] => application\modules\social\components\services\Google
+                            [client_id] => 473884891536-5boujq2crvfopijpjgj4lgr0qp234ih4.apps.googleusercontent.com
+                            [client_secret] => 9aK37f_dqQONDVpCwO4i-2gr
+                            [title] => Google
+                        )
+
+                )
+
+            [popup] => 
+            [cache] => cache
+            [cacheExpire] => 0
+            [redirectView:protected] => redirect
+            [behaviors] => Array
+                (
+                )
+
+            [_initialized:CApplicationComponent:private] => 
+            [_e:CComponent:private] => 
+            [_m:CComponent:private] => 
+        )
+
+    [redirectUrl:EAuthServiceBase:private] => /
+    [cancelUrl:EAuthServiceBase:private] => http://new.komimport.ru/social/login/service/google
+    [_e:CComponent:private] => 
+    [_m:CComponent:private] => 
+)

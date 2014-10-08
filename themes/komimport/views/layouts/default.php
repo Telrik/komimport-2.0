@@ -38,12 +38,12 @@
 
 
     <!-- Google Web Fonts Local-->
-    <?php Yii::app()->clientScript->registerCssFile('/css/google-fonts.css'); ?>
+    <?php //Yii::app()->clientScript->registerCssFile('/css/google-fonts.css'); ?>
 
-    <!--
+
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-    -->
+
 
     <?php Yii::app()->clientScript->registerScriptFile('/js/bootstrap-hover-dropdown.min.js'); ?>
     <?php //Yii::app()->clientScript->registerScriptFile('/js/jquery.magnific-popup.min.js'); ?>

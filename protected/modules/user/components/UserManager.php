@@ -54,6 +54,8 @@ class UserManager extends CApplicationComponent
 
                 $transaction->commit();
 
+
+
                 return $user;
             }
 
