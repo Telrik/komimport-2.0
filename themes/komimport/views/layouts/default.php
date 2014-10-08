@@ -171,7 +171,16 @@
                 </div>
                 <!-- Logo Starts -->
 
-                <div class="col-md-2">
+
+                <div style="" class="col-md-5">
+                    <h4 style="margin: 0 ;display: block;" class="lead lead-test">
+                        <i class="fa fa-phone"></i> <span data-toggle="tooltip" data-placement="right" title="Прием звонков: пн-пт 7.00 - 18.00"> 8-495-651-61-19</span>
+                    </h4>
+                    <h4 style="margin: 0" class="lead lead-test">
+                        <i class="fa fa-phone"></i> <span data-toggle="tooltip" data-placement="right" title="Бесплатный по России"> 8-800-555-61-19</span>
+                    </h4>
+                </div>
+                <div class="col-md-3">
                     <p>
                         <i class="fa fa-envelope"></i> <a href="mailto:zakaz@komimport.ru">zakaz@komimport.ru</a>
                     </p>
@@ -180,15 +189,6 @@
                         <i class="fa fa-skype"></i> <a href="skype:julia.komimport@?chat">julia.komimport</a>
                     </p>
                 </div>
-                <div style="" class="col-md-6">
-                    <h4 style="margin: 0 ;display: block;" class="lead lead-test">
-                        <i class="fa fa-phone"></i> <span data-toggle="tooltip" data-placement="right" title="Прием звонков: пн-пт 7.00 - 18.00"> 8-495-651-61-19</span>
-                    </h4>
-                    <h4 style="margin: 0" class="lead lead-test">
-                        <i class="fa fa-phone"></i> <span data-toggle="tooltip" data-placement="right" title="Бесплатный по России"> 8-800-555-61-19</span>
-                    </h4>
-                </div>
-
                 <div class="col-md-2">
 
 
