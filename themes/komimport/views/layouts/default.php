@@ -163,18 +163,17 @@
     <div class="container">
         <!-- Main Header Starts -->
         <div class="main-header">
-            <div class="row">
+            <div class="row" style="margin-right:0px">
                 <!-- Logo Starts -->
                 <div class="col-md-3">
                     <div id="logo">
-                        <a href="/"><img src="/images/logo.png" title="Spice Shoppe" alt="Spice Shoppe" class="img-responsive"/></a>
+                        <a href="/"><img src="/images/logo.png" title="KOMIMPORT" alt="Spice Shoppe" class="img-responsive"/></a>
                     </div>
                 </div>
-                <!-- Logo Starts -->
+                <!-- Logo Ends -->
 
-                <div class="col-md-3">
-
-
+                <div style="margin-bottom: 15px;" class="col-md-3 well wellSuper3">
+                    <br/>
                 </div>
 
                 <div style="" class="col-md-2">
@@ -187,35 +186,38 @@
                 </div>
 
                 <div class="col-md-2">
-                    <p>
+                    <p style="white-space: nowrap;">
                         <i class="fa fa-envelope"></i> <a href="mailto:zakaz@komimport.ru">zakaz@komimport.ru</a>
                     </p>
 
-                    <p class="skype-contact">
+                    <p style="white-space: nowrap;" class="skype-contact">
                         <i class="fa fa-skype"></i> <a href="skype:julia.komimport@?chat">julia.komimport</a>
                     </p>
                 </div>
-                <div class="col-md-2">
-
-
+                <div style="margin-bottom: 2px;" class="col-md-2 well wellSuper2">
+                    <br/>
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" style="margin-right:0px">
                 <div class="col-md-3">
-                    <p style="font-size:12px">Продажа запчастей и техники komatsu, caterpillar, yetsan. Ремонт и восстановление.</p>
+                    <p style="font-size:12px">Продажа запчастей и техники komatsu, caterpillar, yetsan. Ремонт, восстановление.</p>
                 </div>
 
                 <!-- Search Starts -->
-                <div class="col-md-7">
+                <div style="padding-left:0px" class="col-md-6">
+
                     <?php $this->widget('application.widgets.SearchBlock'); ?>
 
                 </div>
                 <!-- Search Ends -->
 
-                <div class="col-md-2">
-                    <div style="display:none;" id="cart-new" class="btn-group btn-block">
-                        <button type="button" data-toggle="dropdown" class="btn btn-block btn-lg btn-info dropdown-toggle">
+                <div style="margin-bottom: 2px;" class="col-md-3 well well-sm wellSuper1">
+
+
+                    <div id="cart-new" class="pull-right btn-group btn-block">
+
+                        <button type="button" data-toggle="dropdown" class="btn-xs btn btn-block btn-lg btn-warning dropdown-toggle">
                             <i class="fa fa-shopping-cart"></i>
 
                             <span class="hidden-md">Корзина</span>
@@ -299,6 +301,7 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
         <!-- Main Header Ends -->

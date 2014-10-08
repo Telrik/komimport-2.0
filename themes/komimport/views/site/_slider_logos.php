@@ -20,8 +20,10 @@ $chunks = array_chunk($files, 6, true);
             <div class="item <?php echo $chunk === reset($chunks) ? 'active' : ''; ?>">
                 <div class="row">
                     <?php foreach ($chunk as $file) { ?>
-                        <div class="col-md-2 col-sm-6">
-                            <img src="<?php echo $file; ?>"/>
+                        <div class="col-md-2 col-sm-4">
+                            <div style="min-height:45px;background: none repeat scroll 0 0 #fff; border: 0px solid #e8e8e8;margin-bottom: 0px;padding: 5px 5px 3px 3px" class="product-col">
+                                <img style="" valign="middle" src="<?php echo $file; ?>"/>
+                            </div>
                         </div>
                     <?php } ?>
                 </div>
