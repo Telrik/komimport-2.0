@@ -1,4 +1,4 @@
-<?php $this->pageTitle = 'Продажа запчастей и техники Komatsu' ?>
+<?php $this->pageTitle = 'Продажа запчастей и техники' ?>
 <h1 style="margin-top:0px"><?php echo $this->pageTitle; ?></h1>
 <?php $this->renderPartial('_slider_logos'); ?>
 <?php $this->renderPartial('_slider_offers_special'); ?>

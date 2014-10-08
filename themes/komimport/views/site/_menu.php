@@ -21,7 +21,7 @@
 
 
         <li class="dropdown">
-            <a href="#1" class="dropdown-toggle" data-hover="dropdown" data-delay="10">Сервис и ТО</a>
+            <a class="dropdown-toggle" data-hover="dropdown" data-delay="10">Сервис и ТО <i class="fa fa-caret-down"></i></a>
 
             <div class="dropdown-menu">
                 <div class="dropdown-inner" style="width:530px">
