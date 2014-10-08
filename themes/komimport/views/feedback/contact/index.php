@@ -1,15 +1,11 @@
 <?php
-
 $this->layout = '//layouts/default';
 $this->pageTitle = Yii::t('FeedbackModule.feedback', 'Contacts');
 $this->breadcrumbs = array(Yii::t('FeedbackModule.feedback', 'Contacts'));
 
-
 Yii::import('application.modules.feedback.FeedbackModule');
 Yii::import('application.modules.install.InstallModule');
 //<script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
-
-
 ?>
 
 <!-- Main Heading Starts -->
@@ -80,14 +76,16 @@ Yii::import('application.modules.install.InstallModule');
     <div id="map-block-none"></div>
 </div>
 <!-- Google Map Ends -->
+
+
 <!-- Starts -->
 <div class="row">
+
 <!-- Contact Details Starts -->
 <div class="col-sm-4">
     <div class="panel panel-smart">
         <div class="panel-heading">
             <h3 class="panel-title">Контактная информация</h3>
-
         </div>
         <div class="panel-body">
             <ul class="list-unstyled contact-details">
@@ -143,8 +141,10 @@ Yii::import('application.modules.install.InstallModule');
     </div>
 </div>
 <!-- Contact Details Ends -->
-<!-- Contact Form Starts -->
+
+<!-- Contact Right -->
 <div class="col-sm-8">
+<div class="row">
     <div class="panel panel-smart form">
         <div class="panel-heading">
             <h3 class="panel-title">Пришлите вашу заявку</h3>
@@ -203,7 +203,7 @@ Yii::import('application.modules.install.InstallModule');
                 <?php echo $form->textAreaGroup(
                     $model,
                     'text',
-                    array('widgetOptions' => array('htmlOptions' => array('rows' => 5)))
+                    array('widgetOptions' => array('htmlOptions' => array('rows' => 3)))
                 ); ?>
             </div>
         </div>
@@ -299,11 +299,97 @@ Yii::import('application.modules.install.InstallModule');
 
         <?php $this->endWidget(); ?>
     </div>
-
 </div>
-<!-- Contact Form Ends -->
+
+<div class="row">
+    <div class="panel panel-smart form">
+        <div class="panel-heading">
+            <h3 class="panel-title">Наши реквизиты</h3>
+        </div>
+        <table border="0" cellpadding="2" cellspacing="2" width="100%">
+            <tbody>
+            <tr>
+                <td><span style="">Полное наименование</span></td>
+                <td><span style="">Общество с ограниченной ответственностью «Комимпорт»</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Юридический адрес</span></td>
+                <td><span style="">115191, г.Москва, ул.Большая Тульская, д.43, офис 311, 312, 313</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Фактический адрес</span></td>
+                <td><span style="">115191, г.Москва, ул.Большая Тульская, д.43, офис&nbsp;</span><span style="font-size: 14px;">311, 312, 313</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Дата регистрации</span></td>
+                <td><span style="">19.05.2008</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Генеральный директор</span></td>
+                <td><span style="">Быстров Виталий Борисович</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Главный бухгалтер</span></td>
+                <td><span style="">Быстров Виталий Борисович</span></td>
+            </tr>
+            <tr>
+                <td><span style="">ИНН</span></td>
+                <td><span style="">7713653767</span></td>
+            </tr>
+            <tr>
+                <td><span style="">КПП</span></td>
+                <td><span style="">772601001</span></td>
+            </tr>
+            <tr>
+                <td><span style="">ОГРН</span></td>
+                <td><span style="">1087746655523</span></td>
+            </tr>
+            <tr>
+                <td><span style="">ОКПО</span></td>
+                <td><span style="">86479458</span></td>
+            </tr>
+            <tr>
+                <td><span style="">ОКАТО</span></td>
+                <td><span style="">45296561000</span></td>
+            </tr>
+            <tr>
+                <td><span style="">ОКВЭД</span></td>
+                <td><span style="">51.6</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Банк</span></td>
+                <td><span style="">ОАО «Сбербанк России» г. Москва</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Расчетный счет</span></td>
+                <td><span style="">40702810638250019951</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Корр. счет</span></td>
+                <td><span style="">30101810400000000225</span></td>
+            </tr>
+            <tr>
+                <td><span style="">БИК Банка</span></td>
+                <td><span style="">044525225</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Телефон</span></td>
+                <td><span style="">+7 (495) 651-61-19</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Факс</span></td>
+                <td><span style="">+7 (495) 651-61-19</span></td>
+            </tr>
+            <tr>
+                <td><span style="">Электронная почта</span></td>
+                <td><span style=""><span class="eml"><a href="mailto:komatsu@komimport.ru">komatsu@komimport.ru</a></span></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+<!-- Contact Right Ends -->
 </div>
 <!-- Ends -->
-</div>
-<!-- Main Container Ends -->
 
