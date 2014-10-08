@@ -146,12 +146,12 @@ $this->keywords = '';
                             Option two is checked
                         </label>
                     </div>
-                </div>-->
+                </div>
 
                 <div class="form-group">
                     <label class="control-label text-uppercase" for="input-quantity">Кол-во:</label>
                     <input type="text" name="quantity" value="1" size="2" id="input-quantity" class="form-control"/>
-                </div>
+                </div>-->
                 <div class="cart-button button-group">
 
                     <div class="modal fade" id="myModal_<?php echo $row['OE_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
