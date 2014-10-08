@@ -1,4 +1,4 @@
-<div class="collapse navbar-collapse navbar-cat-collapse">
+<div style="background: url('http://subtlepatterns.com/patterns/carbon_fibre.png') repeat scroll 0% 0% transparent;" class="collapse navbar-collapse navbar-cat-collapse">
     <ul class="nav navbar-nav">
         <li class="dropdown">
             <a href="#0" class="dropdown-toggle" data-hover="dropdown" data-delay="10">
