@@ -172,7 +172,7 @@
                 </div>
                 <!-- Logo Ends -->
 
-                <div style="margin-bottom: 15px;background: url('http://subtlepatterns.com/patterns/carbon_fibre.png') repeat scroll 0% 0% transparent;" class="col-md-3 well wellSuper3">
+                <div style="margin-bottom: 15px;" class="col-md-3 well wellSuper3">
                     <br/>
                 </div>
 
@@ -194,7 +194,7 @@
                         <i class="fa fa-skype"></i> <a href="skype:julia.komimport@?chat">julia.komimport</a>
                     </p>
                 </div>
-                <div style="margin-bottom: 2px;background: url('http://subtlepatterns.com/patterns/carbon_fibre.png') repeat scroll 0% 0% transparent;" class="col-md-2 well wellSuper2">
+                <div style="margin-bottom: 2px;" class="col-md-2 well wellSuper2">
                     <br/>
                 </div>
             </div>
@@ -205,19 +205,19 @@
                 </div>
 
                 <!-- Search Starts -->
-                <div style="padding-left:0px" class="col-md-6">
+                <div style="padding-left:0px" class="col-md-7">
 
                     <?php $this->widget('application.widgets.SearchBlock'); ?>
 
                 </div>
                 <!-- Search Ends -->
 
-                <div style="margin-bottom: 2px;background: url('http://subtlepatterns.com/patterns/carbon_fibre.png') repeat scroll 0% 0% transparent;" class="col-md-3 well well-sm wellSuper1">
+                <div style="margin-bottom: 2px;background: url('http://subtlepatterns.com/patterns/carbon_fibre.png') repeat scroll 0% 0% transparent;" class="col-md-2 well well-sm wellSuper1">
 
 
                     <div id="cart-new" class="pull-right btn-group btn-block">
 
-                        <button type="button" data-toggle="dropdown" class="btn-xs btn btn-block btn-lg btn-success dropdown-toggle">
+                        <button type="button" data-toggle="dropdown" class="btn-xs btn btn-block btn-lg btn-inverse dropdown-toggle">
                             <i class="fa fa-shopping-cart"></i>
 
                             <span class="hidden-md">Корзина</span>
