@@ -181,15 +181,11 @@
                     </p>
                 </div>
                 <div style="" class="col-md-6">
-                    <p style="font-size:12px;vertical-align: top;display:inline">
-                        Прием звонков: пн-пт 7.00 - 18.00
-                    </p>
-                    <br/>
-                    <h4 style="" class="lead lead-test">
-                        <i class="fa fa-phone"></i> <span> 8-495-651-61-19</span>
+                    <h4 style="margin: 0 ;display: block;" class="lead lead-test">
+                        <i class="fa fa-phone"></i> <span data-toggle="tooltip" data-placement="right" title="Прием звонков: пн-пт 7.00 - 18.00"> 8-495-651-61-19</span>
                     </h4>
-                    <h4 style="  margin-left: 10px !important;" class="lead lead-test">
-                        <i class="fa fa-phone"></i> <span> 8-800-555-61-19</span>
+                    <h4 style="margin: 0" class="lead lead-test">
+                        <i class="fa fa-phone"></i> <span data-toggle="tooltip" data-placement="right" title="Бесплатный по России"> 8-800-555-61-19</span>
                     </h4>
                 </div>
 
@@ -212,7 +208,7 @@
                 <!-- Search Ends -->
 
                 <div class="col-md-2">
-                    <div id="cart-new" class="btn-group btn-block">
+                    <div style="display:none;" id="cart-new" class="btn-group btn-block">
                         <button type="button" data-toggle="dropdown" class="btn btn-block btn-lg btn-info dropdown-toggle">
                             <i class="fa fa-shopping-cart"></i>
 
