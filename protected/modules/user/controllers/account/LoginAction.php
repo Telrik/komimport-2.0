@@ -13,6 +13,8 @@
  **/
 use yupe\helpers\Url;
 
+\Yii::import('ext.partist.partistConnector', true);
+
 class LoginAction extends CAction
 {
     public function run()
@@ -37,6 +39,16 @@ class LoginAction extends CAction
         if (Yii::app()->getRequest()->getIsPostRequest() && !empty($_POST['LoginForm'])) {
 
             $form->setAttributes(Yii::app()->getRequest()->getPost('LoginForm'));
+
+            /* partist */
+            if ($form->validate()) {
+                $auth = \PartistConnector::authorization($form['email'], $form['password']);
+                if ($auth) {
+                    print_r($auth);
+                    die('*');
+                }
+            }
+            /* end */
 
             if ($form->validate() && Yii::app()->authenticationManager->login(
                     $form,

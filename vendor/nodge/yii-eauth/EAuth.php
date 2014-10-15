@@ -67,6 +67,7 @@ class EAuth extends CApplicationComponent {
 		}
 
 		if (false === $services || !is_array($services)) {
+
 			$services = array();
 			foreach ($this->services as $service => $options) {
 				$class = $this->getIdentity($service);
@@ -80,7 +81,10 @@ class EAuth extends CApplicationComponent {
 			if (isset($cache)) {
 				$cache->set('EAuth.services', $services, $this->cacheExpire);
 			}
+
+
 		}
+        //print_r($services);
 		return $services;
 	}
 

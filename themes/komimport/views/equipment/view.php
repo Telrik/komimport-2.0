@@ -88,15 +88,19 @@ $this->keywords = '';
             <!-- Manufacturer Ends -->
             <hr/>
             <!-- Price Starts -->
+
+
+
+
             <div class="price">
                 <span class="price-head">Цена: </span>
                 <?php if ($row['PRICE']['RUR'] == 0) { ?>
                     <span class="price-new"><strong class="label label-warning">По запросу</strong></span>
                 <?php } else { ?>
-                    <span class="price-new"><?php echo round($row['PRICE']['RUR']); ?>&nbsp;<i class="fa fa-rub"></i></span>
+                    <span class="price-new"><?php echo number_format(ceil($row['PRICE']['RUR']), 0, ',', ' '); ?>&nbsp;<i class="fa fa-rub"></i></span>
                     <span style="color:#808080">Старая цена: </span><span class="price-old"><?php srand($row['OE_id']);
                         $r = rand(105, 135);
-                        echo round($row['PRICE']['RUR'] / 100 * $r); ?>&nbsp;<i class="fa fa-rub"></i></span>
+                        echo number_format(ceil($row['PRICE']['RUR'] / 100 * $r), 0, ',', ' ');; ?>&nbsp;<i class="fa fa-rub"></i></span>
                 <?php } ?>
 
                 <p class="price-tax"></p>
@@ -257,8 +261,22 @@ $this->keywords = '';
         <!-- Specification Ends -->
     </div>
     <!-- Tab Content Ends -->
+
+    <div style="padding:15px" class="product-info">
+        <div class="product-details">
+            <div class="cart-button button-group">
+                <button type="button" data-toggle="modal" data-target="#myModal_<?php echo $row['OE_id']; ?>" class="btn btn-cart" style="font-size: 14px;color: #2f353b;background: #ffb400;text-transform: uppercase;width: 100%; margin: 2em 0em; font-family: 'Roboto Condensed', sans-serif;">
+                    Заказать сейчас
+                    <i class="fa fa-shopping-cart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Tabs Ends -->
+
+<!--.product-info .product-details .btn-cart-->
+
 
 <?php if (count($related) > 0) { ?>
     <!-- Related Products Starts -->

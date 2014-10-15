@@ -22,6 +22,65 @@ class EquipmentSideBar extends CPortlet
         ?>
         <!-- Sidebar Starts -->
 
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div style="padding:0" class="panel-heading">
+                    <h4 class="side-heading panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            Категории
+                        </a>
+                        <i class="fa fa-caret-down"></i>
+
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+
+                        <?php foreach ($types as $type) {
+                            $param = array_merge($_GET, array('type' => $type['TE_id']));
+                            $param['page'] = 1;
+
+                            ///equipment/type/' . $type['TE_id'] . '
+                            //echo Yii::app()->createUrl('/equipment/list', array('mark' => $current_mark['B_id'], 'type' => $type['TE_id'])), false);
+                            echo '<a href="/equipment/list?' . http_build_query($param) . '" class="list-group-item">';
+                            echo '<i class="fa fa-chevron-right"></i>';
+                            echo $type['TE_name'];
+                            echo '</a>';
+                        }?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div style="padding:0" class="panel-heading">
+                <h4 class="side-heading panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                        Марки
+                    </a>
+                    <i class="fa fa-caret-down"></i>
+
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <?php foreach ($brands as $brand) {
+                        if ($brand['B_name'] == '') continue;
+                        $param = array_merge($_GET, array('mark' => $brand['B_id']));
+                        $param['page'] = 1;
+                        //echo '<a href="/equipment/brand/' . $brand['B_id'] . '" class="list-group-item">';
+                        echo '<a href="/equipment/list?' . http_build_query($param) . '" class="list-group-item">';
+                        echo '<i class="fa fa-chevron-right"></i>';
+                        echo $brand['B_name'];
+                        echo '</a>';
+                    }?>
+                </div>
+            </div>
+        </div>
+        </div>
+        <?php
+
+        /*
         <!-- Categories Links Starts -->
         <h3 class="side-heading">Категории</h3>
         <div class="list-group">
@@ -50,8 +109,7 @@ class EquipmentSideBar extends CPortlet
         </div>
         <!-- Brands Links Ends -->
 
-        <?php
-        /*
+
          *         <!-- Shopping Options Starts -->
                 <h3 class="side-heading">Фильтр</h3>
                 <div class="list-group">

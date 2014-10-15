@@ -137,6 +137,15 @@
             /*background: none;/* url("http://subtlepatterns.com/patterns/carbon_fibre.png") repeat scroll 0% 0% transparent;*/
         }
 
+        .auth-icon.partist {
+            background: url("/images/1412857843_Settings-32.png") repeat scroll 0% 0% transparent !important;
+        }
+
+        .btn-cart:hover {
+            background: none repeat scroll 0 0 #2f353b !important;
+            color: #fff !important;
+        }
+
         /*
         .readmore:hover, .readless:hover {
             text-decoration: none;
@@ -186,17 +195,8 @@
                 </div>
                 <!-- Logo Ends -->
 
-                <div style="margin-bottom: 15px;" class="col-md-3 well wellSuper3">
-                    <br/>
-                </div>
-
-                <div style="" class="col-md-2">
-                    <h4 style="margin: 0 ;display: block;white-space: nowrap;" class="lead lead-test">
-                        <i class="fa fa-phone"></i>&nbsp;<span data-toggle="tooltip" data-placement="left" title="Прием звонков: пн-пт 7.00 - 18.00">8-495-651-61-19</span>
-                    </h4>
-                    <h4 style="margin: 0;white-space: nowrap;" class="lead lead-test">
-                        <i class="fa fa-phone"></i>&nbsp;<span data-toggle="tooltip" data-placement="left" title="Бесплатный по России">8-800-555-61-19</span>
-                    </h4>
+                <div class="col-md-3">
+                    &nbsp;
                 </div>
 
                 <div class="col-md-2">
@@ -208,7 +208,17 @@
                         <i class="fa fa-skype"></i> <a href="skype:julia.komimport@?chat">julia.komimport</a>
                     </p>
                 </div>
-                <div style="margin-bottom: 2px;" class="col-md-2 well wellSuper2">
+                <div class="col-md-2">
+                    <h4 style="margin: 0 ;display: block;white-space: nowrap;" class="lead lead-test">
+                        <i class="fa fa-phone"></i>&nbsp;<span data-toggle="tooltip" data-placement="left" title="Прием звонков: пн-пт 7.00 - 18.00">8-495-651-61-19</span>
+                    </h4>
+                    <h4 style="margin: 0;white-space: nowrap;" class="lead lead-test">
+                        <i class="fa fa-phone"></i>&nbsp;<span data-toggle="tooltip" data-placement="left" title="Бесплатный по России">8-800-555-61-19</span>
+                    </h4>
+
+                </div>
+
+                <div class="col-md-2">
                     <br/>
                 </div>
             </div>

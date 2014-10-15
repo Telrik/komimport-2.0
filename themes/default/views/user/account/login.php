@@ -103,7 +103,7 @@ $this->breadcrumbs = array(Yii::t('UserModule.user', 'Sign in'));
                 'vendor.nodge.yii-eauth.EAuthWidget',
                 array(
                     'action'             => '/social/login',
-                    'predefinedServices' => array('google', 'facebook', 'vkontakte', 'twitter', 'github'),
+                    'predefinedServices' => array('partist', 'google', 'facebook', 'vkontakte', 'twitter', 'github'),
                 )
             );
             ?>

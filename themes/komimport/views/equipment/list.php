@@ -28,6 +28,35 @@ $this->keywords = '';
 
 <!-- Product Filter Starts -->
 <div class="product-filter">
+    <?php /*
+    <div class="row">
+        <!-- Brands Links Starts -->
+        <h3 class="side-heading">Марки</h3>
+
+        <?php
+
+        $brands = \PartistConnector::getBrands();
+        $chunks = array_chunk($brands, (count($brands) / 4), true);
+
+        foreach ($chunks as $chunk) {
+            echo '<div class="col-md-3">';
+            foreach ($chunk as $brand) {
+                if ($brand['B_name'] == '') continue;
+                //echo '<a href="/equipment/brand/' . $brand['B_id'] . '" class="list-group-item">';
+                echo '<a href="/equipment/list?' . htmlspecialchars(http_build_query(array_merge($_GET, array('mark' => $brand['B_id'])))) . '" class="list-group-item">';
+                echo '<i class="fa fa-chevron-right"></i>';
+                echo $brand['B_name'];
+                echo '</a>';
+
+            }
+            echo '</div>';
+        }
+        ?>
+
+    </div>
+*/
+    ?>
+    <!-- Brands Links Ends -->
     <div class="row">
         <div class="col-md-4">
             <div class="display">

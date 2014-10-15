@@ -62,11 +62,13 @@
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="10">О нас</a>
             <ul class="dropdown-menu" role="menu">
-                <li><a tabindex="-1" href="#">Сотрудники</a></li>
+                <li><a tabindex="-1" href="#">о Комимпорт</a></li>
                 <li><a tabindex="-1" href="#">Реквизиты</a></li>
-                <li><a tabindex="-1" href="#">Наши клиенты и партнеры</a></li>
-                <li><a tabindex="-1" href="#">Отзывы</a></li>
-                <li><a tabindex="-1" href="#">История Komatsu</a></li>
+                <li><a tabindex="-1" href="#">Схема проезда</a></li>
+                <li><a tabindex="-1" href="#">Качество</a></li>
+                <li><a tabindex="-1" href="#">Логистика</a></li>
+                <li><a tabindex="-1" href="#">Иновации</a></li>
+                <li><a tabindex="-1" href="#">Сотрудники</a></li>
             </ul>
         </li>
 

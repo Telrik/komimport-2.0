@@ -99,17 +99,28 @@ $this->layout = '//layouts/default';
 <?php if (Yii::app()->hasModule('social')): { ?>
     <div class="row">
         <div class="col-xs-12">
-            <?php
-            $this->widget(
-                'vendor.nodge.yii-eauth.EAuthWidget',
-                array(
-                    'action' => '/social/login',
-                    'predefinedServices' => array('google', 'facebook', 'vkontakte', 'twitter', 'github'),
-                )
-            );
-            ?>
+
+            <div class="panel panel-success panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Войти с помощью</h3>
+                </div>
+                <div class="panel-body">
+                    <?php
+                    $this->widget(
+                        'vendor.nodge.yii-eauth.EAuthWidget',
+                        array(
+                            'action' => '/social/login',
+                            'predefinedServices' => array('partist', 'google', 'facebook', 'vkontakte', 'twitter', 'github'),
+                        )
+                    );
+                    ?>
+                </div>
+            </div>
+
+
         </div>
     </div>
+
 <?php } endif; ?>
 <div class="row">
     <div class="col-xs-12">
