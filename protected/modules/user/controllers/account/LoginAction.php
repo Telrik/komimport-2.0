@@ -42,11 +42,13 @@ class LoginAction extends CAction
 
             /* partist */
             if ($form->validate()) {
-                $auth = \PartistConnector::authorization($form['email'], $form['password']);
-                if ($auth) {
-                    print_r($auth);
-                    die('*');
-                }
+                
+                //$auth = \PartistConnector::authorization($form['email'], $form['password']);
+                //if ($auth) {
+//                    print_r($auth);
+                //                  die('*');
+                //            }
+
             }
             /* end */
 
