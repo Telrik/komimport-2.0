@@ -57,12 +57,16 @@ class UserManager extends CApplicationComponent
 
 
                 return $user;
+            } else {
+
+                CVarDumper::dump($user->attributes, 10, true);
+                CVarDumper::dump($user->errors, 10, true);
+
             }
 
             throw new CException(Yii::t('UserModule.user', 'Error creating account!'));
 
         } catch (Exception $e) {
-
             Yii::log(
                 Yii::t('UserModule.user', 'Error {error} account creating!', array('{error}' => $e->__toString())),
                 CLogger::LEVEL_INFO,
@@ -72,6 +76,7 @@ class UserManager extends CApplicationComponent
             $transaction->rollback();
 
             Yii::app()->eventManager->fire(UserEvents::FAILURE_REGISTRATION, new UserRegistrationEvent($form, $user));
+
 
             return false;
         }

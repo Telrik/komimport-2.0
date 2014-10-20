@@ -19,8 +19,6 @@ class EquipmentController extends Controller
     {
         $this->layout = 'equipment';
 
-        $data = \PartistConnector::getOfferEquipmentByParams($mark, $type, $num_on_page, $page);
-
         if ($type) {
             $all_types = \PartistConnector::getTypesEquipment();
             $current_type = $all_types[$type];
@@ -30,6 +28,7 @@ class EquipmentController extends Controller
             $all_marks = \PartistConnector::getBrands();
             $current_mark = $all_marks[$mark];
         }
+
         $data = \PartistConnector::getOfferEquipmentByParams($mark, $type, $num_on_page, $page);
 
         $pager = array(
@@ -38,6 +37,8 @@ class EquipmentController extends Controller
             'num_on_page' => $data['NUM_ON_PAGE'],
             'page' => $page,
         );
+
+        //print_r($data);
 
         $this->render('list', array(
             'id' => $type,

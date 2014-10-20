@@ -18,7 +18,8 @@ $form = $this->beginWidget(
 ?>
 
 <?php echo $form->errorSummary($model); ?>
-
+<?php
+/*
 <div class="row">
     <div class="col-xs-3">
         <?php $this->widget('AvatarWidget', array('user' => $user, 'noCache' => true)); ?>
@@ -39,7 +40,8 @@ $form = $this->beginWidget(
         ); ?>
     </div>
 </div>
-
+*/
+?>
 <div class="row">
     <div class="col-sm-6">
         <?php echo $form->textFieldGroup(

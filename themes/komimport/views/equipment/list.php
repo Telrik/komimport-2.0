@@ -1,7 +1,7 @@
 <?php
 $this->pageTitle = 'Техника';
 $this->breadcrumbs = array('Техника');
-$this->description = '';
+$this->description = trim($this->pageTitle . ' ' . $current_mark['B_name'] . '  ' . $current_type['TE_name']);
 $this->keywords = '';
 ?>
 <!-- Main Heading Starts -->
@@ -136,10 +136,10 @@ $this->keywords = '';
         \Yii::import('ext.pagination.Pagination', true);
         $pagination = (new Pagination());
         $pagination->setCurrent($pager['page']);
-        $pagination->setTotal($pager['pages']);
+        $pagination->setTotal($pager['num_records']);
         $pagination->setCrumbs(10);
         $pagination->setRPP($pager['num_on_page']);
-
+        //$pagination->alwaysShowPagination(true);
         echo $markup = $pagination->parse();
         ?>
     </div>

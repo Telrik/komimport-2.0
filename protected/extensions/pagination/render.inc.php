@@ -63,10 +63,9 @@ if ($pages > 1 || $alwaysShowPagination === true) {
                 }
             }
 
-            if ($current - $leading < 1) {
-                $leading = $current - 1;
-            }
-
+            // if ($current - $leading < 1) {
+            //     $leading = $current - 1;
+            // }
 
             // calculate trailing crumb count based on inverse of leading
             $trailing = $max - $leading - 1;

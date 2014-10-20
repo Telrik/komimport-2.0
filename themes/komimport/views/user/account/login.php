@@ -20,6 +20,14 @@ $this->layout = '//layouts/default';
 <?php echo $form->errorSummary($model); ?>
 
 <div class='row'>
+    <div class="col-xs-12">
+        <div class="alert alert-info">
+            Вы можете использовать аккаунт Partist.ru для входа
+        </div>
+    </div>
+</div>
+
+<div class='row'>
     <div class="col-xs-6">
         <?php echo $form->textFieldGroup($model, 'email'); ?>
     </div>

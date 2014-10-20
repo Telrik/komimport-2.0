@@ -47,11 +47,11 @@ class ProfileForm extends CFormModel
             array(
                 'nick_name',
                 'match',
-                'pattern' => '/^[A-Za-z0-9]{2,50}$/',
+                'pattern' => '/^[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюяA-Za-z0-9_-]{2,50}$/',
                 'message' => Yii::t(
-                    'UserModule.user',
-                    'Bad field format for "{attribute}". You can use only letters and digits from 2 to 20 symbols'
-                )
+                        'UserModule.user',
+                        'Bad field format for "{attribute}". You can use only letters and digits from 2 to 20 symbols'
+                    )
             ),
             array('nick_name', 'checkNickName'),
             array('site', 'url', 'allowEmpty' => true),
@@ -60,8 +60,8 @@ class ProfileForm extends CFormModel
             array(
                 'avatar',
                 'file',
-                'types'      => implode(',', $module->avatarExtensions),
-                'maxSize'    => $module->avatarMaxSize,
+                'types' => implode(',', $module->avatarExtensions),
+                'maxSize' => $module->avatarMaxSize,
                 'allowEmpty' => true
             ),
         );
@@ -70,17 +70,17 @@ class ProfileForm extends CFormModel
     public function attributeLabels()
     {
         return array(
-            'first_name'   => Yii::t('UserModule.user', 'Name'),
-            'last_name'    => Yii::t('UserModule.user', 'Last name'),
-            'middle_name'  => Yii::t('UserModule.user', 'Family name'),
-            'nick_name'    => Yii::t('UserModule.user', 'User name'),
-            'gender'       => Yii::t('UserModule.user', 'Sex'),
-            'birth_date'   => Yii::t('UserModule.user', 'Birthday date'),
-            'about'        => Yii::t('UserModule.user', 'About yourself'),
-            'avatar'       => Yii::t('UserModule.user', 'Avatar'),
+            'first_name' => Yii::t('UserModule.user', 'Name'),
+            'last_name' => Yii::t('UserModule.user', 'Last name'),
+            'middle_name' => Yii::t('UserModule.user', 'Family name'),
+            'nick_name' => Yii::t('UserModule.user', 'User name'),
+            'gender' => Yii::t('UserModule.user', 'Sex'),
+            'birth_date' => Yii::t('UserModule.user', 'Birthday date'),
+            'about' => Yii::t('UserModule.user', 'About yourself'),
+            'avatar' => Yii::t('UserModule.user', 'Avatar'),
             'use_gravatar' => Yii::t('UserModule.user', 'Gravatar'),
-            'site'         => Yii::t('UserModule.user', 'Site'),
-            'location'     => Yii::t('UserModule.user', 'Location'),
+            'site' => Yii::t('UserModule.user', 'Site'),
+            'location' => Yii::t('UserModule.user', 'Location'),
         );
     }
 

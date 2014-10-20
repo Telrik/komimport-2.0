@@ -236,7 +236,7 @@
                 </div>
                 <!-- Search Ends -->
 
-                <div style="margin-bottom: 2px;background: url('http://subtlepatterns.com/patterns/carbon_fibre.png') repeat scroll 0% 0% transparent;" class="col-md-2 well well-sm wellSuper1">
+                <div style="margin-bottom: 2px;" class="col-md-2 well well-sm wellSuper1">
 
 
                     <div id="cart-new" class="pull-right btn-group btn-block">

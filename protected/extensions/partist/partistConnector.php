@@ -10,16 +10,69 @@ class PartistConnector
     //$rez = custom_get_reguest('type=komimport&request=getoffersequipment'); //&mark[]=38 &mark[]=1
     //$data = \PartistConnector::file_contents("http://partist.ru/connector.php?type=find_parts&catalogue_nums[]=$term&country=$country");
 
+    public static function fullLogin($form)
+    {
+        $email = $form['email'];
+        $password = $form['password'];
+
+        $auth = \PartistConnector::authorization($email, $password);
+
+        if ($auth['status'] == 'ok') {
+            $puser = User::model()->active()->find(
+                array(
+                    'condition' => 'email = :username OR nick_name = :username',
+                    'params' => array(
+                        ':username' => $email
+                    )
+                )
+            );
+
+            if (null === $puser) {
+                // Создаём нового пользователя
+                $reg_form = new RegistrationForm();
+                $reg_form->disableCaptcha = true;
+                $reg_form->nick_name = $auth['data']['name'];
+                $reg_form->email = $email;
+                $reg_form->password = $password;
+
+                if ($puser = Yii::app()->userManager->createUser($reg_form)) {
+                    $puser->first_name = $auth['data']['name'];
+                    $puser->middle_name = $auth['data']['fname'];
+                    $puser->last_name = $auth['data']['family'];
+                    $puser->status = User::STATUS_ACTIVE;
+                    $puser->email_confirm = User::EMAIL_CONFIRM_YES;
+                    $puser->save();
+                } else {
+                    $form->addError('email', Yii::t('main', 'Partist auth go wrong!'));
+                }
+
+            } else {
+                //Одностороняя синхронизация
+                $puser->first_name = $auth['data']['name'];
+                $puser->middle_name = $auth['data']['fname'];
+                $puser->last_name = $auth['data']['family'];
+                $puser->hash = Yii::app()->userManager->hasher->hashPassword($password);
+
+                $puser->save();
+            }
+
+            // Обновляем все данные
+            $puser->partist = json_encode($auth['data']);
+            $puser->save();
+        }
+
+        // Array ( [status] => ok [message] => [data] => Array ( [id] => 1660 [id_author] => 109833 [family] => [name] => Федр [fname] => [email] => fs@m7.ru [SID] => 45e150ddd60dc6565f6686a970a24b6c
+        // [FIRMS_DATA] => Array ( [1688] => Array ( [id] => 1688 [name] => telrik ) ) ) )
+    }
+
     public static function authorization($email, $password, $type = 'user', $action = 'authorization')
     {
-
         //echo "http://partist.ru/connector.php?type=$type&action=$action&email=$email&password=$password";
-
         $data = PartistConnector::file_contents("http://partist.ru/connector.php?type=$type&action=$action&email=$email&password=$password");
-        if ($data['status'] =='ok') {
-            return $data;
-        }
-        return false;
+
+        return $data;
+
+
     }
 
     public static function getTypesEquipment1()

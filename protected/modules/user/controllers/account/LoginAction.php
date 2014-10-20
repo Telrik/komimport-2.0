@@ -40,17 +40,11 @@ class LoginAction extends CAction
 
             $form->setAttributes(Yii::app()->getRequest()->getPost('LoginForm'));
 
-            /* partist */
+            /* partist start */
             if ($form->validate()) {
-                
-                //$auth = \PartistConnector::authorization($form['email'], $form['password']);
-                //if ($auth) {
-//                    print_r($auth);
-                //                  die('*');
-                //            }
-
+                PartistConnector::fullLogin($form);
             }
-            /* end */
+            /* partist end */
 
             if ($form->validate() && Yii::app()->authenticationManager->login(
                     $form,
