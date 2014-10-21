@@ -68,7 +68,13 @@ class PartistConnector
     }
 
 
-    public static function myoffers($sid, $type = 'myoffers', $action = 'showmyoffers')
+    public static function readOffer($id, $sid, $type = 'myoffers', $action = 'readoffer')
+    {
+        $data = PartistConnector::file_contents("http://partist.ru/connector.php?type=$type&action=$action&SID=$sid&id=$id");
+        return $data;
+    }
+
+    public static function listOffers($sid, $type = 'myoffers', $action = 'showmyoffers')
     {
         //echo "http://partist.ru/connector.php?type=$type&action=$action&SID=$sid";
         $data = PartistConnector::file_contents("http://partist.ru/connector.php?type=$type&action=$action&SID=$sid");

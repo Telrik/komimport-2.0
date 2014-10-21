@@ -1,5 +1,11 @@
+<style>
+    .offers-view tr:hover td {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+</style>
 <?php
-$myoffers = \PartistConnector::myoffers($data['SID']);
 
 //print_r($myoffers);
 //print_r($myoffers['data']['data']);
@@ -13,15 +19,12 @@ $this->widget('bootstrap.widgets.TbTabs', array(
         array(
             'label' => Yii::t('main', 'Мои предложения'),
             'content' => $this->widget('bootstrap.widgets.TbGridView', array(
-
                         'selectableRows' => 1,
-                        'selectionChanged' => 'function(id){ location.href = "' . $this->createUrl('view') . '?id="+$.fn.yiiGridView.getSelection(id);}',
-
-
-                        'dataProvider' => new CArrayDataProvider($myoffers['data']['data'] ?  $myoffers['data']['data'] : array(), array('pagination' => array('pageSize' => 50))),
-                        //'dataProvider' => new CArrayDataProvider($myoffers['data'], array('id' => 'blink', 'pagination' => array('pageSize' => 512))),
-                        'template' => '{items} {pager}',
-                        'htmlOptions' => array('style' => 'padding-top:0px;'),
+                        'selectionChanged' => 'function(id){ location.href = "' . $this->createUrl('//global/viewOffer') . '?id="+$.fn.yiiGridView.getSelection(id);}',
+                        //'dataProvider' => new CArrayDataProvider($myoffers['data']['data'] ? $myoffers['data']['data'] : array(), array('pagination' => array('pageSize' => 50))),
+                        'dataProvider' => new CArrayDataProvider($myoffers['data']['data'] ? $myoffers['data']['data'] : array(), array('pagination' => array('pageSize' => 50))),
+                        'template' => '{items}',
+                        'htmlOptions' => array('class' => 'offers-view', 'style' => 'padding-top:0px;'),
                         'type' => 'striped bordered condensed',
                         'columns' => array(
                             array(

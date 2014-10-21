@@ -22,6 +22,7 @@ return array(
     'rules' => array(
         '/min/serve/g/<g:\w+>/lm/<lm:\d+>' => 'min/serve',
         '/global/profile' => 'global/profile',
+        '/global/viewOffer' => 'global/viewOffer',
         '/equipment/' => 'equipment/list',
         //'/equipment/<action:\w+>' => 'equipment/<action>',
         '/equipment/view/<id:\d+>' => 'equipment/view',
