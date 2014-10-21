@@ -4,7 +4,10 @@ Yii::import('application.modules.menu.components.YMenu');
 
 $auth_menu = Menu::model()->getItems('auth-menu', 0);
 //print_r($auth_menu);
-array_unshift($auth_menu, array('label' => '<a style="color:navy;font-weight:bold;" href="/global/profile" class="listItemLink" title="Профиль">' . Yii::app()->user->profile->first_name . ', ' . Yii::app()->user->profile->email . '</a>'));
+
+if (Yii::app()->user->isAuthenticated()) {
+    array_unshift($auth_menu, array('label' => '<a style="color:navy;font-weight:bold;" href="/global/profile" class="listItemLink" title="Профиль">' . Yii::app()->user->profile->first_name . ', ' . Yii::app()->user->profile->email . '</a>'));
+}
 
 $this->widget(
     'bootstrap.widgets.TbNavbar',
