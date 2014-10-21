@@ -67,6 +67,8 @@ class PartistConnector
         // [FIRMS_DATA] => Array ( [1688] => Array ( [id] => 1688 [name] => telrik ) ) ) )
     }
 
+
+
     public static function authorization($email, $password, $type = 'user', $action = 'authorization')
     {
         //echo "http://partist.ru/connector.php?type=$type&action=$action&email=$email&password=$password";
