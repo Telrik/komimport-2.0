@@ -50,8 +50,6 @@ $(document).ready(function () {
     }
 
     $('.order_tech').click(function (e) {
-
-        zzz = this;
         var modal = $(this).parents('div.modal');
         var email = modal.find('input[name=email]').val();
         var id = modal.find('input[name=tech_id]').val();
@@ -68,6 +66,7 @@ $(document).ready(function () {
             success: function (data) {
 
                 modal.modal('hide');
+                alert('Ваша заявка успешно отправлена');
 
                 if (typeof data.data != 'undefined' && typeof data.result != 'undefined') {
 
@@ -75,8 +74,6 @@ $(document).ready(function () {
                 else {
 
                 }
-
-
             },
             error: function (data) {
                 if (typeof data.data != 'undefined' && typeof data.result != 'undefined') {

@@ -1,12 +1,21 @@
 <?php
 namespace application\controllers;
 
-use application\components\Controller;
-
 \Yii::import('ext.partist.partistConnector', true);
+use application\components\Controller;
+use Yii;
 
 class EquipmentController extends Controller
 {
+
+    public function actionOrder()
+    {
+        Yii::app()->user->setFlash(
+            yupe\widgets\YFlashMessages::SUCCESS_MESSAGE,
+            Yii::t('main', 'Ваш заказ отправлен на обработку')
+        );
+
+    }
 
     public function actionIndex()
     {

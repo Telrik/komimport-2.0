@@ -135,7 +135,7 @@ class User extends yupe\models\YModel
             array(
                 'nick_name',
                 'match',
-                'pattern' => '/^[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюяA-Za-z0-9_-]{2,50}$/',
+                'pattern' => '/^[.@АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьыъэюяA-Za-z0-9_-]{2,50}$/',
                 'message' => Yii::t(
                         'UserModule.user',
                         'Bad field format for "{attribute}". You can use only letters and digits from 2 to 20 symbols'

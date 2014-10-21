@@ -12,12 +12,14 @@ class PartistConnector
 
     public static function fullLogin($form)
     {
-        $email = $form['email'];
+        $login = $form['email'];
         $password = $form['password'];
 
-        $auth = \PartistConnector::authorization($email, $password);
+        $auth = \PartistConnector::authorization($login, $password);
 
         if ($auth['status'] == 'ok') {
+            $email = $auth['data']['email'];
+
             $puser = User::model()->active()->find(
                 array(
                     'condition' => 'email = :username OR nick_name = :username',
@@ -31,7 +33,7 @@ class PartistConnector
                 // Создаём нового пользователя
                 $reg_form = new RegistrationForm();
                 $reg_form->disableCaptcha = true;
-                $reg_form->nick_name = $auth['data']['name'];
+                $reg_form->nick_name = $login;
                 $reg_form->email = $email;
                 $reg_form->password = $password;
 
