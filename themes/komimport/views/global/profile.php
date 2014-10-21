@@ -3,7 +3,7 @@
 function myoffers($sid, $type = 'myoffers', $action = 'showmyoffers')
 {
     echo "http://partist.ru/connector.php?type=$type&action=$action&SID=$sid";
-    $data = PartistConnector::file_contents("http://partist.ru/connector.php?type=$type&action=$action&sid=$sid");
+    $data = PartistConnector::file_contents("http://partist.ru/connector.php?type=$type&action=$action&SID=$sid");
     return $data;
 }
 
