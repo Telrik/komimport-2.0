@@ -128,7 +128,13 @@
         }
 
         #main-menu .dropdown-menu {
-            background: url("http://subtlepatterns.com/patterns/carbon_fibre.png") repeat scroll 0% 0% transparent;
+            background: url("http://subtlepatterns.com/patterns/dark_Tire.png") repeat scroll 0% 0% transparent;
+            /*background: url("http://subtlepatterns.com/patterns/carbon_fibre.png") repeat scroll 0% 0% transparent;*/
+        }
+
+        .tire {
+            background: url("http://subtlepatterns.com/patterns/dark_Tire.png") repeat scroll 0% 0% transparent;
+            /*background: url('http://subtlepatterns.com/patterns/carbon_fibre.png') repeat scroll 0% 0% transparent;*/
         }
 
         #main-menu .navbar-nav > li.open a:hover {

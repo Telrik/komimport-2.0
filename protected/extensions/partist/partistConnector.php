@@ -68,15 +68,18 @@ class PartistConnector
     }
 
 
+    public static function myoffers($sid, $type = 'myoffers', $action = 'showmyoffers')
+    {
+        //echo "http://partist.ru/connector.php?type=$type&action=$action&SID=$sid";
+        $data = PartistConnector::file_contents("http://partist.ru/connector.php?type=$type&action=$action&SID=$sid");
+        return $data;
+    }
 
     public static function authorization($email, $password, $type = 'user', $action = 'authorization')
     {
         //echo "http://partist.ru/connector.php?type=$type&action=$action&email=$email&password=$password";
         $data = PartistConnector::file_contents("http://partist.ru/connector.php?type=$type&action=$action&email=$email&password=$password");
-
         return $data;
-
-
     }
 
     public static function getTypesEquipment1()

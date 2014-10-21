@@ -1,9 +1,7 @@
-<div style="background: url('http://subtlepatterns.com/patterns/carbon_fibre.png') repeat scroll 0% 0% transparent;" class="collapse navbar-collapse navbar-cat-collapse">
+<div class="tire collapse navbar-collapse navbar-cat-collapse">
     <ul class="nav navbar-nav">
         <li class="dropdown">
-            <a href="#0" class="dropdown-toggle" data-hover="dropdown" data-delay="10">
-                Запчасти
-            </a>
+            <a href="#0" class="dropdown-toggle" data-hover="dropdown" data-delay="10">Запчасти&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
             <ul class="dropdown-menu" role="menu">
                 <li><a tabindex="-1" href="">Запчасти для двигателя</a></li>
                 <li><a tabindex="-1" href="">Ходовая часть</a></li>
@@ -21,7 +19,7 @@
 
 
         <li class="dropdown">
-            <a class="dropdown-toggle" data-hover="dropdown" data-delay="10">Сервис и ТО <i class="fa fa-caret-down"></i></a>
+            <a class="dropdown-toggle" data-hover="dropdown" data-delay="10">Сервис и ТО&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
 
             <div class="dropdown-menu">
                 <div class="dropdown-inner" style="width:530px">
@@ -60,7 +58,7 @@
         </li>
 
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="10">О нас</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="10">О нас&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
             <ul class="dropdown-menu" role="menu">
                 <li><a tabindex="-1" href="#">о Комимпорт</a></li>
                 <li><a tabindex="-1" href="#">Реквизиты</a></li>
