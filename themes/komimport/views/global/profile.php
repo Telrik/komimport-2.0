@@ -1,8 +1,11 @@
 <?php
 $myoffers = \PartistConnector::myoffers($data['SID']);
+
+//print_r($myoffers);
 //print_r($myoffers['data']['data']);
 //$myoffers_data = json_decode($myoffers['data']);
 //die();
+
 $this->widget('bootstrap.widgets.TbTabs', array(
     'type' => 'tabs', // 'tabs' or 'pills'
     'encodeLabel' => false,
@@ -10,7 +13,12 @@ $this->widget('bootstrap.widgets.TbTabs', array(
         array(
             'label' => Yii::t('main', 'Мои предложения'),
             'content' => $this->widget('bootstrap.widgets.TbGridView', array(
-                        'dataProvider' => new CArrayDataProvider($myoffers['data']['data'], array('pagination' => array('pageSize' => 50))),
+
+                        'selectableRows' => 1,
+                        'selectionChanged' => 'function(id){ location.href = "' . $this->createUrl('view') . '?id="+$.fn.yiiGridView.getSelection(id);}',
+
+
+                        'dataProvider' => new CArrayDataProvider($myoffers['data']['data'] ?  $myoffers['data']['data'] : array(), array('pagination' => array('pageSize' => 50))),
                         //'dataProvider' => new CArrayDataProvider($myoffers['data'], array('id' => 'blink', 'pagination' => array('pageSize' => 512))),
                         'template' => '{items} {pager}',
                         'htmlOptions' => array('style' => 'padding-top:0px;'),
